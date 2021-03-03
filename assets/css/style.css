@@ -1,0 +1,106 @@
+:root {
+    --poppins: 'Poppins', sans-serif;
+    --darkBG: #252525;
+    --turquoise: #0bc9c1;
+}
+
+body {
+    font-family: var(--poppins);
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: 100%;
+    background: var(--darkBG);
+}
+
+header {
+    background: var(--darkBG);
+    display: flex;
+    height: 120px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1em;
+}
+
+.max-width-1440 {
+    max-width: 1440px;
+    margin: 0 auto;
+} 
+
+header input[type="text"] {
+    width: 300px;
+    padding: .75em 1em;
+    border-radius: 5px;
+    border: solid 3px;
+}
+
+header input[type="text"]:focus, header input[type="text"]:hover {
+    outline: none;
+    border: 3px solid var(--turquoise);
+}
+
+.search-bar {
+    color: #fff;
+}
+
+.search-bar > :first-child {
+    margin-right: 1em;
+}
+
+.fa-search {
+    font-size: 1.5rem;
+}
+
+.nav {
+    display: flex;
+    position: relative;
+    gap: 1em;
+}
+
+.nav > div {
+    padding: 1em 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav a {
+    color: #fff;
+    overflow: hidden;
+    padding: 1em;
+}
+
+.nav a::before, .nav a::after {
+	content: '';
+    position: absolute;
+	width: 100%;
+	height: 51%;
+    background: #fff;
+    height: 2px;
+	transition: transform ease .3s;
+}
+
+.nav a::before {
+    transform: translate(-300px);
+    top: 0;
+    left: 0;
+
+}
+
+.nav a::after {
+    right: 0;
+    bottom: 0;
+    transform: translate(300px);
+}
+
+.nav a:hover::before, .nav a:hover::after {
+    transform: translate(0);
+}
