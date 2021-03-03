@@ -22,6 +22,8 @@ ul {
     background: var(--darkBG);
 }
 
+/* ======== HEADER ======== */
+
 header {
     background: var(--darkBG);
     display: flex;
@@ -104,3 +106,6 @@ header input[type="text"]:focus, header input[type="text"]:hover {
 .nav a:hover::before, .nav a:hover::after {
     transform: translate(0);
 }
+
+/* ======== HERO ======== */
+
