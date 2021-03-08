@@ -7,6 +7,7 @@
 body {
     font-family: var(--poppins);
     font-size: 16px;
+    background: #212121;
 }
 
 a {
@@ -173,8 +174,44 @@ header > *:nth-child(2) {
 
 /* ======== MAIN ======== */
 
+.section {
+    margin-bottom: 2em;
+    padding: 2em 2em 4em 2em;
+    background: #ffffff09;
+    box-shadow: 0 0 10px #212121;
+}
+
+.section:first-child {
+    margin-top: 4em;
+}
+
+.section .col {
+    margin-bottom: 1em;
+}
+
+.section h2 {
+    margin-bottom: 1em;
+    color: var(--turquoise);
+}
+
 .grid {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    flex-wrap:wrap;
+    gap: 1em;
+}
+
+.grid img {
+    border: 10px solid #fff;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, .2);
+    border-radius: 7px;
+}
+
+/* ======== FOOTER ======== */
+
+footer {
+    text-align: center;
+    color: #fff;
 }
