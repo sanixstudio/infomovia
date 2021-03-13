@@ -1,14 +1,26 @@
 :root {
     --poppins: 'Poppins', sans-serif;
+    --roboto: 'Roboto', sans-serif;
     --darkBG: #252525;
     --lightDarkBG: #3a3a3a;
     --turquoise: #0bc9c1;
+    --f-light: #ddd;
+    --start: #e4bb24;
 }
 
-body {
-    font-family: var(--poppins);
+body:not(p) {
+    font-family: var(--roboto);
     font-size: 16px;
     background: #212121;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--poppins);
 }
 
 a {
@@ -27,6 +39,7 @@ ul {
 /* ======== HEADER ======== */
 
 header {
+    font-family: var(--poppins);
     background: var(--darkBG);
     display: flex;
     height: 80px;
@@ -56,6 +69,7 @@ header > *:nth-child(2) {
 
 .search-bar input[type="text"] {
     width: 100%;
+    background: var(--lightDarkBG);
     padding: .5em 1em;
     border-radius: 30px;
     border: solid 3px transparent;
@@ -63,14 +77,16 @@ header > *:nth-child(2) {
 
 .search-bar input[type="text"]:focus, header input[type="text"]:hover {
     outline: none;
+    background: #eee;
+    transition: all ease .3s;
     border: 3px solid var(--turquoise);
 }
 
 .fa-search {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     position: absolute;
-    right: .6em;
-    top: .4em;
+    right: .8em;
+    top: calc(50% - .5em);
 }
 
 .nav {
@@ -141,7 +157,6 @@ header > *:nth-child(2) {
 .genre:hover {
     color: var(--turquoise);
     cursor: pointer;
-    background: #444;
 }
 
 /* ======== HERO ======== */
@@ -170,11 +185,41 @@ header > *:nth-child(2) {
 
 .hero figcaption {
     position: absolute;
-    color: #fff;
+    color: var(--f-light);
     background-image: linear-gradient(transparent, rgba(0,0,0, .8), rgba(0, 0, 0, .8));
     width: 100%;
     padding: 3em;
-    word-spacing: .1em;
+    text-align: left;
+    font-weight: 300;
+}
+
+.hero figcaption h2 {
+    font-size: 2.5rem;
+}
+
+.hero .info {
+    margin: 1em 0;
+}
+
+.hero .info span {
+    margin-right: 1em;
+    color: var(--turquoise);
+}
+
+.hero .info .fa-star {
+    color: var(--start);
+}
+
+.genre-sec > span {
+    background: var(--lightDarkBG);
+    margin-right: 3px !important;
+    padding: .3em .5em;
+    border-radius: 5px;
+}
+
+.hero figcaption p {
+    max-width: 50%;
+    line-height: 1.5;
 }
 
 /* ======== MAIN ======== */
