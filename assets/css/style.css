@@ -1,13 +1,26 @@
 :root {
     --poppins: 'Poppins', sans-serif;
+    --roboto: 'Roboto', sans-serif;
     --darkBG: #252525;
+    --lightDarkBG: #3a3a3a;
     --turquoise: #0bc9c1;
+    --f-light: #ddd;
+    --start: #e4bb24;
 }
 
-body {
-    font-family: var(--poppins);
+body:not(p) {
+    font-family: var(--roboto);
     font-size: 16px;
     background: #212121;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--poppins);
 }
 
 a {
@@ -28,6 +41,7 @@ ul {
 /****************************/
 
 header {
+    font-family: var(--poppins);
     background: var(--darkBG);
     display: flex;
     height: 80px;
@@ -57,6 +71,7 @@ header > *:nth-child(2) {
 
 .search-bar input[type="text"] {
     width: 100%;
+    background: var(--lightDarkBG);
     padding: .5em 1em;
     border-radius: 30px;
     border: solid 3px transparent;
@@ -65,14 +80,16 @@ header > *:nth-child(2) {
 .search-bar input[type="text"]:focus, 
 header input[type="text"]:hover {
     outline: none;
+    background: #eee;
+    transition: all ease .3s;
     border: 3px solid var(--turquoise);
 }
 
 .fa-search {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     position: absolute;
-    right: .6em;
-    top: .4em;
+    right: .8em;
+    top: calc(50% - .5em);
 }
 
 .nav {
@@ -82,19 +99,13 @@ header input[type="text"]:hover {
 }
 
 .nav > div {
-    padding: 1em 0;
+    padding: 1.6em 0;
     position: relative;
-    overflow-x: hidden;
-}
-
-.nav > div:first-child {
-    /* overflow: initial !important; */
 }
 
 .nav a {
     color: #fff;
-    overflow: hidden;
-    padding: 1em;
+    padding: 1.6em;
     cursor: pointer;
 }
 
@@ -103,48 +114,53 @@ header input[type="text"]:hover {
     color: var(--turquoise);
 }
 
-.nav a::before, 
-.nav a::after {
-	content: '';
-    position: absolute;
-	width: 100%;
-	height: 51%;
-    background: var(--turquoise);
-    height: 2px;
-	transition: transform ease .3s;
+.dropdown-container {
+    position: relative;
 }
-
-.nav a::before {
-    transform: translate(-300px);
-    top: 0;
-    left: 0;
-}
-
-.nav a::after {
-    right: 0;
-    bottom: 0;
-    transform: translate(300px);
-}
-
-.nav a:hover::before, 
-.nav a:hover::after, 
-.nav a:focus::before, 
-.nav a:focus::after {
-    transform: translate(0);
-}
-
 
 .dropdown-menu-btn {
     position: relative;
 }
 
 .dropdown-menu {
-    display: none;
     position: absolute;
-    /* display: flex; */
+    transform: scale(0) translate(-100%);
+    display: none;
+    background: var(--lightDarkBG);
     flex-direction: column;
-    border: 1px solid #000;
-    width: 100%;
+    transition: all ease .3s;
+    top: 70%;
+    border-radius: 10px;
+    padding: 1em 1.5em;
+    left: 0;
+    z-index: 1;
+}
+
+.dropdown-menu-btn:hover + .dropdown-menu , 
+.dropdown-menu:hover,
+.dropdown-menu > div {
+    display: flex;
+    flex-direction: row;
+    transform: scale(1) translate(0);
+    transition: all ease .3s;
+    gap: .5em 1em;
+}
+
+.dropdown-menu > div {
+    font-size: .8rem;
+    color: #aaa;
+    display: flex;
+    flex-direction: column;
+}
+
+.genre {
+    padding: .5em 1em;
+    border-radius: 5px;
+}
+
+.genre:hover {
+    color: var(--turquoise);
+    cursor: pointer;
 }
 
 /****************************/
@@ -175,11 +191,41 @@ header input[type="text"]:hover {
 
 .hero figcaption {
     position: absolute;
-    color: #fff;
+    color: var(--f-light);
     background-image: linear-gradient(transparent, rgba(0,0,0, .8), rgba(0, 0, 0, .8));
     width: 100%;
     padding: 3em;
-    word-spacing: .1em;
+    text-align: left;
+    font-weight: 300;
+}
+
+.hero figcaption h2 {
+    font-size: 2.5rem;
+}
+
+.hero .info {
+    margin: 1em 0;
+}
+
+.hero .info span {
+    margin-right: 1em;
+    color: var(--turquoise);
+}
+
+.hero .info .fa-star {
+    color: var(--start);
+}
+
+.genre-sec > span {
+    background: var(--lightDarkBG);
+    margin-right: 3px !important;
+    padding: .3em .5em;
+    border-radius: 5px;
+}
+
+.hero figcaption p {
+    max-width: 50%;
+    line-height: 1.5;
 }
 
 /* ======== MAIN ======== */
