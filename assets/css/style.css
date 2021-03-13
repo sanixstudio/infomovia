@@ -23,7 +23,9 @@ ul {
     background: var(--darkBG);
 }
 
+/****************************/
 /* ======== HEADER ======== */
+/****************************/
 
 header {
     background: var(--darkBG);
@@ -60,7 +62,8 @@ header > *:nth-child(2) {
     border: solid 3px transparent;
 }
 
-.search-bar input[type="text"]:focus, header input[type="text"]:hover {
+.search-bar input[type="text"]:focus, 
+header input[type="text"]:hover {
     outline: none;
     border: 3px solid var(--turquoise);
 }
@@ -95,11 +98,13 @@ header > *:nth-child(2) {
     cursor: pointer;
 }
 
-.nav a:hover ,.nav a:focus {
+.nav a:hover,
+.nav a:focus {
     color: var(--turquoise);
 }
 
-.nav a::before, .nav a::after {
+.nav a::before, 
+.nav a::after {
 	content: '';
     position: absolute;
 	width: 100%;
@@ -121,7 +126,10 @@ header > *:nth-child(2) {
     transform: translate(300px);
 }
 
-.nav a:hover::before, .nav a:hover::after, .nav a:focus::before, .nav a:focus::after {
+.nav a:hover::before, 
+.nav a:hover::after, 
+.nav a:focus::before, 
+.nav a:focus::after {
     transform: translate(0);
 }
 
@@ -139,7 +147,9 @@ header > *:nth-child(2) {
     width: 100%;
 }
 
+/****************************/
 /* ======== HERO ======== */
+/****************************/
 
 .hero {
     display: flex;
