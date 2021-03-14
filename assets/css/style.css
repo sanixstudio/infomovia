@@ -6,6 +6,7 @@
     --turquoise: #0bc9c1;
     --f-light: #ddd;
     --start: #e4bb24;
+    --white: #fff;
 }
 
 body:not(p) {
@@ -104,7 +105,7 @@ header input[type="text"]:hover {
 }
 
 .nav a {
-    color: #fff;
+    color: var(--white);
     padding: 1.6em;
     cursor: pointer;
 }
@@ -150,6 +151,7 @@ header input[type="text"]:hover {
     font-size: .8rem;
     color: #aaa;
     display: flex;
+    min-width: 50%;
     flex-direction: column;
 }
 
@@ -161,6 +163,7 @@ header input[type="text"]:hover {
 .genre:hover {
     color: var(--turquoise);
     cursor: pointer;
+    background: var(--darkBG);
 }
 
 /****************************/
@@ -233,8 +236,8 @@ header input[type="text"]:hover {
 .section {
     margin-bottom: 2em;
     padding: 2em 2em 4em 2em;
-    background: #ffffff09;
-    box-shadow: 0 0 10px #212121;
+    background:  var(--lightDarkBG);
+    box-shadow: 0 0 30px #151515;
 }
 
 .section:first-child {
@@ -250,14 +253,12 @@ header input[type="text"]:hover {
     color: var(--turquoise);
 }
 
-.grid {
-    width: 100%;
+.grid .col {
     display: flex;
-    border: 1px solid #fff;
     justify-content: space-between;
     align-items: center;
     flex-wrap:wrap;
-    gap: 1em;
+    gap: 4em 1em;
 }
 
 .grid img {

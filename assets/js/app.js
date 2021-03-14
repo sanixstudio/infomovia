@@ -6,13 +6,17 @@ const URL_PLAYING_NOW = `${URL_BASE}movie/now_playing?language=en-US&api_key=${A
 const URL_TOP_RATED = `${URL_BASE}movie/top_rated?language=en-US&api_key=${API_KEY}`;
 const URL_SEARCH = `${URL_BASE}search/movie?api_key=${API_KEY}&language=en-US&query=${"movieName"}&page=1&include_adult=false`;
 
+/************************************************************
+    Get All category (Playing Now, Upcoming and Top-rated)
+*************************************************************/
+
 const getMoviesCategory = async (category, selector) => {
     const res = await (await fetch(category)).json();
 
     for (let movie of res.results) {
-        console.log(movie);
-        const col = document.querySelector(selector);
-        let temp = `<div><img class="poster" src=${URL_IMG + movie.poster_path || "null"} alt=""></div>`
+        const className = document.querySelector(selector);
+        let temp = `<div><img class="poster" src=${URL_IMG + movie.poster_path || "null"} alt=""></div>`;
+        className.innerHTML += temp;
     }
 
 }
