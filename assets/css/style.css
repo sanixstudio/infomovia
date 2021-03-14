@@ -1,8 +1,8 @@
 :root {
     --poppins: 'Poppins', sans-serif;
     --roboto: 'Roboto', sans-serif;
-    --darkBG: #252525;
-    --lightDarkBG: #3a3a3a;
+    --darkBG: #1d1d1d;
+    --lightDarkBG: #252525;
     --turquoise: #0bc9c1;
     --f-light: #ddd;
     --start: #e4bb24;
@@ -253,6 +253,7 @@ header input[type="text"]:hover {
 .grid {
     width: 100%;
     display: flex;
+    border: 1px solid #fff;
     justify-content: space-between;
     align-items: center;
     flex-wrap:wrap;
@@ -260,8 +261,7 @@ header input[type="text"]:hover {
 }
 
 .grid img {
-    border: 10px solid #fff;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, .2);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.699);
     border-radius: 7px;
 }
 
