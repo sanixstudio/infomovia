@@ -1,6 +1,7 @@
 const API_KEY = "1dc3a1bc9c9d1a12ed9931344d82ebc1";
 const URL_BASE = 'https://api.themoviedb.org/3/';
 const URL_IMG = "https://image.tmdb.org/t/p/w185/";
+const URL_POSTER = "https://image.tmdb.org/t/p/original/";
 const URL_UPCOMING = `${URL_BASE}movie/upcoming?language=en-US&api_key=${API_KEY}`;
 const URL_PLAYING_NOW = `${URL_BASE}movie/now_playing?language=en-US&api_key=${API_KEY}`;
 const URL_TOP_RATED = `${URL_BASE}movie/top_rated?language=en-US&api_key=${API_KEY}`;
