@@ -83,7 +83,7 @@ header > *:nth-child(2) {
     background: var(--lightDarkBG);
     padding: .5em 1em;
     border-radius: 30px;
-    border: solid 3px transparent;
+    border: none;
 }
 
 .search-bar input[type="text"]:focus, 
@@ -91,7 +91,7 @@ header input[type="text"]:hover {
     outline: none;
     background: #eee;
     transition: all ease .3s;
-    border: 3px solid var(--turquoise);
+    border: solid 3px var(--turquoise)
 }
 
 .fa-search {
@@ -207,18 +207,24 @@ header input[type="text"]:hover {
     max-width: 100%;
     min-width: 1440px;
     height: 650px;
-    object-position: top;
-    object-fit: cover;
+    -o-object-position: top;
+       object-position: top;
+    -o-object-fit: cover;
+       object-fit: cover;
     position: relative;
 }
 
 .hero figcaption {
     position: absolute;
-    color: var(--f-light);
     background-image: linear-gradient(transparent, rgba(0,0,0, .8), rgba(0, 0, 0, .8));
     width: 100%;
     padding: 3em;
     text-align: left;
+   
+}
+
+.hero figcaption, .movie-info-section{
+    color: var(--f-light);
     font-weight: 300;
 }
 
@@ -261,7 +267,6 @@ header input[type="text"]:hover {
     margin-bottom: 4em;
     padding: 0 2em;
     padding-bottom: 2em;
-    border-bottom: solid 1px var(--lightDarkBG);
 }
 
 .section:first-child {
@@ -282,11 +287,11 @@ header input[type="text"]:hover {
     gap: 4em 1em;
 }
 
-/* .col>div:nth-last-of-type(4n) {border: 1px solid #fff;} */
-/* .col>div:nth-last-of-type(4n) {border: 1px solid #fff;} */
-.col>div:last-of-type {display: none;;}
+.col > div:last-of-type {
+    display: none;
+}
 
-.grid img {
+.grid img, .movie-info-container > div img {
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.699);
     border-radius: 7px;
 }
@@ -306,6 +311,39 @@ footer {
 /* ======== Movie Info Template ======== */
 .movie-info-container {
     display: flex;
-    max-width:500px;
-    justify-content: center;
+    width: 960px;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 350px;
+    padding: 4em 0;
+    gap: 4em;
+}
+
+.movie-info-container > div img {
+    min-width: 185px !important;
+}
+
+.movie-info-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.movie-info-container > div:last-child {
+    width: 100%;
+    align-self: start;
+    margin-top: 2em;
+}
+
+.stats-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.stats-lables {
+    font-weight: normal;
+    display: inline-block;
+    width: 150px;
 }
