@@ -60,7 +60,6 @@ const getMoviesForCarousel = async() => {
         const { title, popularity, genre_ids, overview } = movie;
 
         bgDynamic.style.background = `url(${URL_POSTER})`
-
         const heroHTML = `<figure>
                             <img src=${poster} data-bg=${poster} alt="">
                             <figcaption>

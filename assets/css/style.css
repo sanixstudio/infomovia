@@ -14,6 +14,7 @@ body:not(p) {
     font-family: var(--roboto);
     font-size: 16px;
     position: relative;
+    color: #fff;
     background: var(--secondLightDarkBG);
 }
 
@@ -303,4 +304,16 @@ header input[type="text"]:hover {
 footer {
     text-align: center;
     color: #fff;
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ======== Movie Info Template ======== */
+.movie-info-container {
+    display: flex;
+    max-width:500px;
+    justify-content: center;
 }

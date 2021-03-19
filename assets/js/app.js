@@ -16,6 +16,7 @@ const getMoviesCategory = async (category, selector) => {
     const res = await (await fetch(category)).json();
 
     for (let movie of res.results) {
+        console.log(movie)
         const className = document.querySelector(selector);
         let temp = `<div><img class="poster" src=${URL_IMG + movie.poster_path || ""} alt=""></div>`;
         className.innerHTML += temp;

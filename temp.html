@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/92c22ce958.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="container bgDark">
+        <div>
+            <header class="max-width-1440">
+                <div class="logo"><a href="/"><img src="./assets/images/infomovia.png" alt="site logo"></a></div>
+                <form>
+                    <div class="search-bar">
+                        <input type="text" name="keywords" id="keywords" placeholder="Enter you keywords">
+                        <i class="fas fa-search"></i>
+                    </div>  
+                </form>
+                <div class="nav">
+                    <div class="dropdown-container">
+                        <a class="dropdown-menu-btn" href="/#">Genre</a>
+                        <div class="dropdown-menu">
+                            <div class="genre-section">
+                                <div class="genre">Action</div>
+                                <div class="genre">Adventure</div>
+                                <div class="genre">Animation</div>
+                                <div class="genre">Biography</div>
+                                <div class="genre">Crime</div>
+                                <div class="genre">Comedy</div>
+                                <div class="genre">Documentary</div>
+                                <div class="genre">Drama</div>
+                            </div>
+                            <div class="genre-section">
+                                <div class="genre">Family</div>
+                                <div class="genre">Fantasy</div>
+                                <div class="genre">Horror</div>
+                                <div class="genre">History</div>
+                                <div class="genre">Music</div>
+                                <div class="genre">Mystery</div>
+                                <div class="genre">Romance</div>
+                                <div class="genre">Sci-fy</div>
+                                <div class="genre">Sports</div>
+                                <div class="genre">Thrill</div>
+                                <div class="genre">War</div>
+                                <div class="genre">Western</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div><a href="#">Playing Now</a></div>
+                    <div><a href="#">Upcoming</a></div>
+                    <div><a href="#">Top Rated</a></div>
+                </div>
+            </header>
+        </div>
+    </div>
+
+    <!-- main -->
+    <main class="max-width-1440">
+        <div class="movie-info-container">
+            <div class="movie-poster-section">
+                <img src="./assets/images/poster1.jpg" alt="">
+            </div>
+            <div class="movie-info-section">
+                <div><h1 class="title">Title</h1></div>
+                <div><i></i></div>
+                <div class="info">
+                    <span class="rating"><i class="fas fa-star"></i>popularity</span>
+                    <span class="genre-sec">
+                    <!-- ${genre_ids.map(id => { 
+                        return `<span>${getGenre(id)}</span>`
+                    })} -->
+                    </span>
+                </div>
+                <p>
+                    ${overview}
+                </p>
+            </div>
+        </div>
+    </main>
+
+     <!-- footer -->
+    <div class="container">
+        <footer class="max-width-1440">
+            footer
+        </footer>
+    </div>
+    
+    <!-- <script src="./assets/js/app.js"></script> -->
+</body>
+</html>
