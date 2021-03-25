@@ -133,14 +133,16 @@ header input[type="text"]:hover {
 
 .dropdown-menu {
     position: absolute;
-    transform: scale(0) translate(-100%);
-    display: none;
+    transform: scaleX(0);
+    transform-origin: left;
     background: var(--lightDarkBG);
     flex-direction: column;
-    transition: all ease .3s;
+    transition: transform ease .3s !important;
     top: 70%;
     border-radius: 10px;
     padding: 1em 1.5em;
+    display: flex;
+    flex-direction: row;
     left: 0;
     z-index: 1;
 }
@@ -148,18 +150,15 @@ header input[type="text"]:hover {
 .dropdown-menu-btn:hover + .dropdown-menu , 
 .dropdown-menu:hover,
 .dropdown-menu > div {
-    display: flex;
-    flex-direction: row;
     transform: scale(1) translate(0);
-    transition: all ease .3s;
-    gap: .5em 1em;
+    transition: transform ease .3s;
+    gap: .5em 3em;
 }
 
 .dropdown-menu > div {
     font-size: .8rem;
     color: #aaa;
     display: flex;
-    min-width: 50%;
     flex-direction: column;
 }
 
@@ -216,6 +215,15 @@ header input[type="text"]:hover {
     /* background-image: linear-gradient(#000000cc, var(--secondLightDarkBG), transparent); */
 }
 
+.hero figure::after {
+    content: '';
+    position: absolute;
+    background-image: linear-gradient(var(--darkBG), transparent);
+    width: 100%;
+    height: 50%;
+    top: 0;
+}
+
 .hero figcaption {
     position: absolute;
     background-image: linear-gradient(transparent, #000000cc, var(--secondLightDarkBG));
@@ -237,6 +245,7 @@ header input[type="text"]:hover {
 
 .hide {
     opacity: 0;
+    transition: all .2s ease-in;
 }
 
 .hero .info {
