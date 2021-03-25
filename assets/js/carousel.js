@@ -46,6 +46,8 @@ const getGenre = (id) => {
     }
 }
 
+let title, popularity, genre_ids, overview, bdPath = "";
+
 // Hero Carousel
 const getMoviesForCarousel = async() => {
     const hero = document.querySelector('.hero');
@@ -57,9 +59,12 @@ const getMoviesForCarousel = async() => {
     let res = await (await fetch(URL_UPCOMING)).json();
     res.results.map((movie, i) => {
         const poster = URL_POSTER + movie.backdrop_path;
-        const { title, popularity, genre_ids, overview } = movie;
+        // { title, popularity, genre_ids, overview } = movie;
+        title = movie.title;
+        popularity = movie.popularity;
+        genre_ids = movie.genre_ids;
+        overview = movie.overview;
 
-        bgDynamic.style.background = `url(${URL_POSTER})`
         const heroHTML = `<figure>
                             <img src=${poster} data-bg=${poster} alt="">
                             <figcaption>
@@ -81,7 +86,6 @@ const getMoviesForCarousel = async() => {
     });
 
     const figures = Array.prototype.slice.call(document.querySelectorAll('figure'))
-    console.log(figures)
     
     figures.forEach(figure => figure.classList.add('hide'))
     figures[currentCarouselItem].classList.remove('hide')

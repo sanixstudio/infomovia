@@ -180,36 +180,39 @@ header input[type="text"]:hover {
 .hero {
     display: flex;
     justify-content: center;
-    align-items: center;
-    text-align: center;
+    position: relative;
 }
 
 .bgDynamic{
-    background: #fff;
-    max-width: 1440px;
-    margin: 0 auto;
-    overflow: hidden;
+    border: 1px solid #fff;
+    width: 100%;
+    height: 100%;
 }
 
 .hero figure {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
     position: absolute;
-    top: 80px;
-    transition: opacity .5s ease-in;
+    max-width: 1440px;
+    overflow: hidden;
 }
 
 .hero figure img {
-    max-width: 100%;
-    min-width: 1440px;
-    height: 650px;
-    -o-object-position: top;
-       object-position: top;
-    -o-object-fit: cover;
-       object-fit: cover;
+    width: 100%;
     position: relative;
+    object-position: top;
+    object-fit: contain;
+}
+
+.hero figure img::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: yellow;
+    z-index: 100;
+    /* background-image: linear-gradient(#000000cc, var(--secondLightDarkBG), transparent); */
 }
 
 .hero figure::after {
@@ -223,11 +226,12 @@ header input[type="text"]:hover {
 
 .hero figcaption {
     position: absolute;
-    color: var(--f-light);
-    background-image: linear-gradient(transparent, rgba(0, 0, 0, .7), var(--secondLightDarkBG) 80%);
+    background-image: linear-gradient(transparent, #000000cc, var(--secondLightDarkBG));
     width: 100%;
+    max-width: 1440px;
     padding: 3em;
     text-align: left;
+    bottom: 0;
 }
 
 .hero figcaption, .movie-info-section{
@@ -322,14 +326,9 @@ footer {
     width: 960px;
     margin: 0 auto;
     justify-content: space-between;
-    align-items: center;
     min-height: 350px;
     padding: 4em 0;
     gap: 4em;
-}
-
-.movie-info-container > div img {
-    min-width: 185px !important;
 }
 
 .movie-info-section {
@@ -340,8 +339,6 @@ footer {
 
 .movie-info-container > div:last-child {
     width: 100%;
-    align-self: start;
-    margin-top: 2em;
 }
 
 .stats-section {
@@ -354,4 +351,17 @@ footer {
     font-weight: normal;
     display: inline-block;
     width: 150px;
+}
+
+.movie-overview {
+    margin: 1em 0;
+}
+
+.stats img {
+    width: 64px;
+    box-shadow: none !important;
+}
+
+.title span {
+    font-weight: normal;
 }
