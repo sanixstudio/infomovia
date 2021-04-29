@@ -1,6 +1,8 @@
 /************************************************************
                         Hero Carousel
 *************************************************************/
+const URL_POSTER = "https://image.tmdb.org/t/p/original/";
+
 const getGenre = (id) => {
     switch(id) {
         case 12:    
@@ -57,7 +59,7 @@ const getMoviesForCarousel = async() => {
 
     // get movies data from Api, make template with data and push to carouselItems array 
     let res = await (await fetch(URL_UPCOMING)).json();
-    res.results.map((movie, i) => {
+    res.results.map((movie) => {
         const poster = URL_POSTER + movie.backdrop_path;
         // { title, popularity, genre_ids, overview } = movie;
         title = movie.title;
