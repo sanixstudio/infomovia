@@ -17,7 +17,9 @@
     <div class="container bgDark">
         <div>
             <header class="max-width-1440">
-                <div class="logo"><img src="./assets/images/infomovia.png" alt="site logo"></div>
+                <div class="logo">
+                    <a href="/"><img src="./assets/images/infomovia.png" alt="site logo"></a>
+                </div>
                 <form id="theForm">
                     <div class="search-bar">
                         <input type="text" name="keywords" id="keywords" placeholder="Enter you keywords">
@@ -29,38 +31,41 @@
                         <a class="dropdown-menu-btn">Genre</a>
                         <div class="dropdown-menu">
                             <div class="genre-section">
-                                <div class="genre">Action</div>
-                                <div class="genre">Adventure</div>
-                                <div class="genre">Animation</div>
-                                <div class="genre">Biography</div>
-                                <div class="genre">Crime</div>
-                                <div class="genre">Comedy</div>
-                                <div class="genre">Documentary</div>
-                                <div class="genre">Drama</div>
-                                <div class="genre">Family</div>
-                                <div class="genre">Fantasy</div>
+                                <div class="genre" data-genre="Action">Action</div>
+                                <div class="genre" data-genre="Adventure">Adventure</div>
+                                <div class="genre" data-genre="Animation">Animation</div>
+                                <div class="genre" data-genre="Biography">Biography</div>
+                                <div class="genre" data-genre="Crime">Crime</div>
+                                <div class="genre" data-genre="Comedy">Comedy</div>
+                                <div class="genre" data-genre="Documentary">Documentary</div>
+                                <div class="genre" data-genre="Drama">Drama</div>
+                                <div class="genre" data-genre="Family">Family</div>
+                                <div class="genre" data-genre="Fantasy">Fantasy</div>
                             </div>
                             <div class="genre-section">
-                                <div class="genre">Horror</div>
-                                <div class="genre">History</div>
-                                <div class="genre">Music</div>
-                                <div class="genre">Mystery</div>
-                                <div class="genre">Romance</div>
-                                <div class="genre">Sci-fy</div>
-                                <div class="genre">Sports</div>
-                                <div class="genre">Thrill</div>
-                                <div class="genre">War</div>
-                                <div class="genre">Western</div>
+                                <div class="genre" data-genre="Horror">Horror</div>
+                                <div class="genre" data-genre="History">History</div>
+                                <div class="genre" data-genre="Music">Music</div>
+                                <div class="genre" data-genre="Mystery">Mystery</div>
+                                <div class="genre" data-genre="Romance">Romance</div>
+                                <div class="genre" data-genre="Sci">Sci-fy</div>
+                                <div class="genre" data-genre="Sports">Sports</div>
+                                <div class="genre" data-genre="Thriller">Thriller</div>
+                                <div class="genre" data-genre="War">War</div>
+                                <div class="genre" data-genre="Western">Western</div>
                             </div>
                         </div>
                     </div>
-                    <div><a href="#">Playing Now</a></div>
-                    <div><a href="#">Upcoming</a></div>
-                    <div><a href="#">Top Rated</a></div>
+                    <div><a href="#playing_now">Playing Now</a></div>
+                    <div><a href="#upcoming">Upcoming</a></div>
+                    <div><a href="#top_rated">Top Rated</a></div>
                 </div>
             </header>
         </div>
     </div>
+
+    <!-- Arrow UP -->
+    <div class="arrow-up"><i class="fas fa-arrow-up"></i></div>
 
     <!-- hero -->
     <div class="bgDynamic">
@@ -71,24 +76,32 @@
 
     <!-- main -->
     <main class="max-width-1440">
-        <section class="section">
+        <section class="section" id="playing_now">
             <h2>Playing Now</h2>
             <div class="grid">
                 <div class="col playing_now"></div>
             </div>
         </section>
 
-        <section class="section">
+        <section class="section" id="upcoming">
             <h2>Upcoming</h2>
             <div class="grid">
                 <div class="col upcoming"></div>
             </div>
         </section>
 
-        <section class="section">
+        <section class="section" id="top_rated">
             <h2>Top Rated</h2>
             <div class="grid">
                 <div class="col top_rated"></div>
+            </div>
+        </section>
+
+        <!-- Search Results Display -->
+        <section" id="search-results">
+            <h2>Search Results: </h2>
+            <div class="grid">
+                <div class="col search-results"></div>
             </div>
         </section>
     </main>
@@ -103,5 +116,17 @@
     <script src="./assets/js/app.js"></script>
     <script src="./assets/js/search.js"></script>
     <script src="./assets/js/carousel.js"></script>
+
+    <script>
+        const arrowBtn = document.querySelector('.arrow-up');
+        const playing_now2 = document.querySelector('#playing_now');
+
+        document.addEventListener("scroll", function(e) {
+            pageYOffset > 750 ?
+                arrowBtn.style.transform = "translateY(0)" :
+                arrowBtn.style.transform = "translateY(8em)";
+        });
+        arrowBtn.addEventListener('click', () => window.scrollTo(0, 0));
+    </script>
 </body>
 </html>

@@ -61,7 +61,6 @@ const getMoviesForCarousel = async() => {
     let res = await (await fetch(URL_UPCOMING)).json();
     res.results.map((movie) => {
         const poster = URL_POSTER + movie.backdrop_path;
-        // { title, popularity, genre_ids, overview } = movie;
         title = movie.title;
         popularity = movie.popularity;
         genre_ids = movie.genre_ids;
