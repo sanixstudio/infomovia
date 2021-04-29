@@ -18,23 +18,24 @@ searchForm.addEventListener('submit', async(e) => {
 
     try{
         const res= await (await fetch(URL_SEARCH)).json();
-        
-        if(res.results === []) console.log("sorry no results")
+
+        if (res.results.length === 0) {
+            document.querySelector('.error-message').style.display = "unset"
+        } else  document.querySelector('.error-message').style.display = "none"
         
         const DomElements = document.querySelectorAll('.hero, #playing_now, #upcoming, #top_rated');
-
         for(let div of DomElements) div.style.display = "none";
+
         searchResultDisplay.innerHTML = "";
         
         for (let movie of res.results) {
+            const {title ,popularity ,genre_ids ,overview} = movie;
 
             let thePosterUrl = "";
 
             movie.poster_path === null? 
                 thePosterUrl = "https://via.placeholder.com/185/000000/FFFFFF/?text=NO-IMAGE" : 
                 thePosterUrl = URL_IMG + movie.poster_path;
-
-            // let moviePoster = movie.poster_path;
 
             const main = document.querySelector('main');
             let temp = `<div><img class="poster" 
@@ -45,10 +46,4 @@ searchForm.addEventListener('submit', async(e) => {
             searchResultDisplay.innerHTML += temp;
         }
     } catch(err){ console.log(err) }
-})
-
-const search = async (query) => {
-    query && console.log(query)
-}
-
-search(searchQuery);
+});

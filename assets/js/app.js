@@ -4,7 +4,6 @@ const OMDB_SEARCH_URL = `http://www.omdbapi.com/?s=${query}&apikey=${OMDB_API_KE
 const API_KEY = "1dc3a1bc9c9d1a12ed9931344d82ebc1";
 const URL_BASE = "https://api.themoviedb.org/3/";
 const URL_IMG = "https://image.tmdb.org/t/p/w185/";
-const NO_IMG_FOUND = `https://via.placeholder.com/150/0000FF/808080 ?Text=NO IMAGE`;
 const URL_UPCOMING = `${URL_BASE}movie/upcoming?language=en-US&api_key=${API_KEY}`;
 const URL_PLAYING_NOW = `${URL_BASE}movie/now_playing?language=en-US&api_key=${API_KEY}`;
 const URL_TOP_RATED = `${URL_BASE}movie/top_rated?language=en-US&api_key=${API_KEY}`;
@@ -17,9 +16,16 @@ const getMoviesCategory = async (category, selector) => {
     try {
         const res = await (await fetch(category)).json();
         for (let movie of res.results) {
+            
+            let thePosterUrl = "";
+
+            movie.poster_path === null? 
+                thePosterUrl = "https://via.placeholder.com/185/000000/FFFFFF/?text=NO-IMAGE" : 
+                thePosterUrl = URL_IMG + movie.poster_path;
+
             const className = document.querySelector(selector);
             let temp = `<div><img class="poster" src=${
-                URL_IMG + movie.poster_path || NO_IMG_FOUND
+                thePosterUrl
             } alt=""></div>`;
             className.innerHTML += temp;
         }
@@ -32,3 +38,16 @@ const getMoviesCategory = async (category, selector) => {
 getMoviesCategory(URL_PLAYING_NOW, ".playing_now");
 getMoviesCategory(URL_UPCOMING, ".upcoming");
 getMoviesCategory(URL_TOP_RATED, ".top_rated");
+
+/*******************************
+            Navigation
+********************************/
+
+const allSectionsLink = document.querySelectorAll('#playing_now_link, #upcoming_link, #top_rated_link');
+
+for (let link of allSectionsLink) {
+    link.addEventListener('click', () => {
+        const DomElements = document.querySelectorAll('.hero, #playing_now, #upcoming, #top_rated');
+        for(let div of DomElements) div.style.display = "block";
+    });
+}

@@ -414,6 +414,15 @@ footer {
     animation: ping 1.5s linear infinite;
 }
 
+.search-h2 {
+    display: none;;
+}
+
+.error-message {
+    display: none;
+    text-align: center;
+}
+
 @keyframes ping {
     0% {
         transform: scale(.3);
