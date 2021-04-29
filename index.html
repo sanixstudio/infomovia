@@ -16,9 +16,9 @@
 <body>
     <div class="container bgDark">
         <div>
-            <header class="max-width-1440">
+            <header class="max-width-1280">
                 <div class="logo">
-                    <a href="/"><img src="./assets/images/infomovia.png" alt="site logo"></a>
+                    <a href="./index.html"><img src="./assets/images/infomovia.png" alt="site logo"></a>
                 </div>
                 <form id="theForm">
                     <div class="search-bar">
@@ -56,9 +56,9 @@
                             </div>
                         </div>
                     </div>
-                    <div><a href="#playing_now">Playing Now</a></div>
-                    <div><a href="#upcoming">Upcoming</a></div>
-                    <div><a href="#top_rated">Top Rated</a></div>
+                    <div><a id="playing_now_link" href="#playing_now">Playing Now</a></div>
+                    <div><a id="upcoming_link" href="#upcoming">Upcoming</a></div>
+                    <div><a id="top_rated_link" href="#top_rated">Top Rated</a></div>
                 </div>
             </header>
         </div>
@@ -69,13 +69,13 @@
 
     <!-- hero -->
     <div class="bgDynamic">
-        <div class="max-width-1440">
+        <div class="max-width-1280">
             <div class="hero"></div>
         </div>
     </div>
 
     <!-- main -->
-    <main class="max-width-1440">
+    <main class="max-width-1280">
         <section class="section" id="playing_now">
             <h2>Playing Now</h2>
             <div class="grid">
@@ -99,7 +99,8 @@
 
         <!-- Search Results Display -->
         <section" id="search-results">
-            <h2>Search Results: </h2>
+            <h2 class="search-h2">Search Results: </h2>
+            <h3 class="error-message">Sorry no results. Try again.</h3>
             <div class="grid">
                 <div class="col search-results"></div>
             </div>
@@ -108,7 +109,7 @@
 
     <!-- footer -->
     <div class="container">
-        <footer class="max-width-1440">
+        <footer class="max-width-1280">
             footer
         </footer>
     </div>
