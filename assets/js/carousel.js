@@ -1,7 +1,7 @@
 /************************************************************
                         Hero Carousel
 *************************************************************/
-const URL_POSTER = "https://image.tmdb.org/t/p/original/";
+const URL_POSTER = "https://image.tmdb.org/t/p/w1280/";
 
 const getGenre = (id) => {
     switch(id) {
@@ -53,7 +53,6 @@ let title, popularity, genre_ids, overview, bdPath = "";
 // Hero Carousel
 const getMoviesForCarousel = async() => {
     const hero = document.querySelector('.hero');
-    const bgDynamic = document.querySelector('.bgDynamic');
     
     let currentCarouselItem = 0;
 
@@ -77,7 +76,6 @@ const getMoviesForCarousel = async() => {
                                         ${genre_ids.map(id => { 
                                             return `<span>${getGenre(id)}</span>`
                                         })}
-                                        </span>
                                     </div>
                                     <p class="overview">
                                         ${overview}

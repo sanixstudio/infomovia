@@ -19,6 +19,7 @@ body:not(p) {
     font-size: 16px;
     position: relative;
     color: #fff;
+    align-items: center;
     background: var(--secondLightDarkBG);
 }
 
@@ -206,8 +207,9 @@ header input[type="text"]:hover {
 
 .bgDynamic{
     width: 100%;
-    height: 680px;
+    height: 750px;
     margin-top: 5em;
+    margin-bottom: 6em;
     overflow: hidden;
 }
 
@@ -215,7 +217,7 @@ header input[type="text"]:hover {
     display: flex;
     position: absolute;
     max-width: 1440px;
-    height: 680px;
+    height: 750px;
     overflow: hidden;
     justify-content: center;
     align-items: center;
@@ -223,10 +225,6 @@ header input[type="text"]:hover {
 }
 
 .carousel-img img {
-    width: 1280px;
-    position: relative;
-    object-position: bottom;
-    object-fit: contain;
     position: relative;
 }
 
@@ -235,18 +233,12 @@ header input[type="text"]:hover {
     width: 100%;
     padding: 2em;
     position: absolute;
-    height: 50%;
     z-index: 10;
-    /* background: rgba(0, 0, 0, .9); */
     background-image: linear-gradient(transparent, #111 50%);
 }
 
 .floating-info p{
     width: 60%;
-}
-
-.movie-title {
-
 }
 
 .hide {
@@ -274,14 +266,6 @@ header input[type="text"]:hover {
     border-radius: 5px;
 }
 
-figcaption p {
-    max-width: 50%;
-    line-height: 1.5;
-}
-
-.carousel {
-    /* border: 10px solid #000; */
-}
 
 /* ======== MAIN ======== */
 
