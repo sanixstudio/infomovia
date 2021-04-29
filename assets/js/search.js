@@ -38,7 +38,8 @@ searchForm.addEventListener('submit', async(e) => {
                 thePosterUrl = URL_IMG + movie.poster_path;
 
             const main = document.querySelector('main');
-            let temp = `<div><img class="poster" 
+            let temp = `<div>
+                            <img class="poster" 
                             src=${ (thePosterUrl) } 
                             alt=${ (thePosterUrl) }>
                         </div>`;
