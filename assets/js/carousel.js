@@ -60,23 +60,29 @@ const getMoviesForCarousel = async() => {
     // get movies data from Api, make template with data and push to carouselItems array 
     let res = await (await fetch(URL_UPCOMING)).json();
     res.results.map((movie) => {
-        const poster = URL_POSTER + movie.backdrop_path;
         const {title, popularity, genre_ids, overview} = movie;
+        let thePosterUrl = "";
+
+        movie.backdrop_sizes === null? 
+            thePosterUrl = "https://via.placeholder.com/185/000000/FFFFFF/?text=NO-IMAGE" : 
+            thePosterUrl = URL_POSTER + movie.poster_path;
 
         const heroHTML =    `<div class="carousel-item">
-                                <div class="carousel-img"><img src=${poster} data-bg=${poster} alt=""></div>
-                                <h2 class="movie-title">${title}</h2>
-                                <div class="info">
-                                    <span class="rating"><i class="fas fa-star"></i>${popularity}</span>
-                                    <span class="genre-sec">
-                                    ${genre_ids.map(id => { 
-                                        return `<span>${getGenre(id)}</span>`
-                                    })}
-                                    </span>
+                                <div class="carousel-img"><img src=${thePosterUrl} data-bg=${thePosterUrl} alt=""></div>
+                                <div class="floating-info">
+                                    <h2 class="movie-title">${title}</h2>
+                                    <div class="info">
+                                        <span class="rating"><i class="fas fa-star"></i>${popularity}</span>
+                                        <span class="genre-sec">
+                                        ${genre_ids.map(id => { 
+                                            return `<span>${getGenre(id)}</span>`
+                                        })}
+                                        </span>
+                                    </div>
+                                    <p class="overview">
+                                        ${overview}
+                                    </p>
                                 </div>
-                                <p>
-                                    ${overview}
-                                </p>
                             </div>`
         hero.innerHTML += heroHTML
     });
@@ -87,8 +93,11 @@ const getMoviesForCarousel = async() => {
     figures[currentCarouselItem].classList.remove('hide')
     
     setInterval(() => {
+        // Hide previous Item if current index is greater than 1
+        if (currentCarouselItem >= 1) { figures[currentCarouselItem - 1].classList.add('hide');}
+
         if (currentCarouselItem < figures.length){
-            figures[currentCarouselItem].classList.remove('hide')
+            figures[currentCarouselItem].classList.remove('hide');
             currentCarouselItem += 1;
             
         }else {
