@@ -198,14 +198,14 @@ header input[type="text"]:hover {
     height: 100%;
 }
 
-.hero figure {
+.hero .carousel-item {
     display: flex;
     position: absolute;
     max-width: 1440px;
     overflow: hidden;
 }
 
-.hero figure img {
+.hero .carousel-item img {
     width: 100%;
     position: relative;
     object-position: top;
@@ -401,4 +401,26 @@ footer {
 
 .arrow-up:hover {
     opacity: .9;
+}
+
+.arrow-up::after {
+    content: '';
+    position: absolute;
+    background: var(--turquoise);
+    width: 48px;
+    height: 48px;
+    z-index: -1;
+    border-radius: 50%;
+    animation: ping 1.5s linear infinite;
+}
+
+@keyframes ping {
+    0% {
+        transform: scale(.3);
+        opacity: .6;
+    }
+    100% {
+        transform: scale(3);
+        opacity: 0;
+    }
 }

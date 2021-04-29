@@ -66,9 +66,8 @@ const getMoviesForCarousel = async() => {
         genre_ids = movie.genre_ids;
         overview = movie.overview;
 
-        const heroHTML = `<figure>
-                            <img src=${poster} data-bg=${poster} alt="">
-                            <figcaption>
+        const heroHTML =    `<div class="carousel-item">
+                                <div class="carousel-img"><img src=${poster} data-bg=${poster} alt=""></div>
                                 <h2 class="movie-title">${title}</h2>
                                 <div class="info">
                                     <span class="rating"><i class="fas fa-star"></i>${popularity}</span>
@@ -81,12 +80,11 @@ const getMoviesForCarousel = async() => {
                                 <p>
                                     ${overview}
                                 </p>
-                            </figcaption>
-                        </figure>`
+                            </div>`
         hero.innerHTML += heroHTML
     });
 
-    const figures = Array.prototype.slice.call(document.querySelectorAll('figure'))
+    // const figures = Array.prototype.slice.call(document.querySelectorAll('.carousel-item'))
     
     figures.forEach(figure => figure.classList.add('hide'))
     figures[currentCarouselItem].classList.remove('hide')
