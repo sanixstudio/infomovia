@@ -12,11 +12,12 @@ const URL_TOP_RATED = `${URL_BASE}movie/top_rated?language=en-US&api_key=${API_K
     Get All category (Playing Now, Upcoming and Top-rated)
 *************************************************************/
 
+let selectedMovie = {};
+
 const getMoviesCategory = async (category, selector) => {
     try {
         const res = await (await fetch(category)).json();
         for (let movie of res.results) {
-            
             let thePosterUrl = "";
 
             movie.poster_path === null? 
@@ -24,13 +25,23 @@ const getMoviesCategory = async (category, selector) => {
                 thePosterUrl = URL_IMG + movie.poster_path;
 
             const className = document.querySelector(selector);
-            let temp = `<div><img class="poster" src=${
-                thePosterUrl
-            } alt=""></div>`;
+            let temp = `<div><img 
+                        data-title="${movie.title}"
+                        data-img="${thePosterUrl}" 
+                        class="poster" src=${thePosterUrl} alt=""></div>`;
             className.innerHTML += temp;
         }
     } catch (err) {
         console.log(err);
+    }
+
+    const posters = document.querySelectorAll('.poster');
+    for(poster of posters) {
+        poster.addEventListener('click', (e) => {
+            let img = e.target.attributes["data-img"].value
+            let title = e.target.attributes["data-title"].value
+            console.log(img, title);
+        });
     }
 };
 
@@ -53,3 +64,8 @@ for (let link of allSectionsLink) {
         for(let div of DomElements) div.style.display = "unset";
     });
 }
+
+/*********************************************
+            Show Single Movie Info
+**********************************************/
+// let currentMovie = {}
