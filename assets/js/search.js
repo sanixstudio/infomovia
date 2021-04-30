@@ -19,15 +19,18 @@ searchForm.addEventListener('submit', async(e) => {
     try{
         const res= await (await fetch(URL_SEARCH)).json();
 
-        if (res.results.length === 0) {
-            document.querySelector('.error-message').style.display = "unset"
-        } else  document.querySelector('.error-message').style.display = "none"
+        console.log(res.total_results);
+
+        if (res.total_results === 0 || res.results.length === []) {
+            // document.body.textContent = "Sorry no results"
+            console.log('sorry no results');
+        } 
         
         const DomElements = document.querySelectorAll('.hero, #playing_now, #upcoming, #top_rated');
         for(let div of DomElements) div.style.display = "none";
 
         searchResultDisplay.innerHTML = "";
-        
+
         for (let movie of res.results) {
             const {title ,popularity ,genre_ids ,overview} = movie;
 
@@ -44,6 +47,7 @@ searchForm.addEventListener('submit', async(e) => {
                             alt=${ (thePosterUrl) }>
                         </div>`;
             main.append
+
             searchResultDisplay.innerHTML += temp;
         }
     } catch(err){ console.log(err) }
