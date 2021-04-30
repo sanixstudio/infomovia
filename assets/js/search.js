@@ -19,8 +19,6 @@ searchForm.addEventListener('submit', async(e) => {
     try{
         const res= await (await fetch(URL_SEARCH)).json();
 
-        console.log(res.total_results);
-
         if (res.total_results === 0 || res.results.length === []) {
             // document.body.textContent = "Sorry no results"
             console.log('sorry no results');

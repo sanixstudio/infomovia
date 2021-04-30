@@ -237,6 +237,20 @@ header input[type="text"]:hover {
     z-index: 10;
 }
 
+.carousel-img::after {
+    position: absolute;
+    content: "";
+    background-image: linear-gradient(transparent, var(--darkBG) 100%), 
+                        linear-gradient(transparent,var(--darkBG) 100%), 
+                        linear-gradient(transparent,var(--darkBG) 100%), 
+                        linear-gradient(transparent,var(--darkBG) 100%), 
+                        linear-gradient(transparent, var(--darkBG) 100%);
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+    z-index: 10;
+}
+
 .hide {
     opacity: 0;
     transition: all .2s ease-in;
@@ -354,7 +368,7 @@ footer {
     font-size: 1.2rem;
     position: absolute;
     z-index: 10;
-    background-image: linear-gradient(transparent, #090909 70%);
+    /* background-image: linear-gradient(transparent, #090909); */
 }
 
 .overview {
@@ -421,4 +435,80 @@ footer {
         transform: scale(3);
         opacity: 0;
     }
+}
+
+.modal_backdrop {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(20, 20, 20, 0.8);
+    z-index: 1001;
+    display: grid;
+    place-content: center;
+    backdrop-filter: blur(10px);
+}
+
+.modal {
+    max-width: 650px;
+    background: #121212;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    margin: 2em;
+    border: 1px solid #ffffff28;
+    position: relative;
+    box-shadow: 0 0 5em #000;
+    border-radius: 10px;
+}
+
+.modal .title {
+    font-size: 2rem;
+    margin: 4em 0 1em 0;
+    color: #fff;
+}
+
+.modal .description {
+    line-height: 160%;
+    text-align: justify;
+}
+
+.modal img {
+    position: absolute;
+    border-radius: 50%;
+    width: 200px;
+    max-height: 200px;
+    object-fit: cover;
+    border: 5px solid #fff;
+    top: -100px;
+    left: calc(50% - 100px);
+}
+
+.modal .title {
+    font-weight: normal;
+    font-size: 2rem;
+    border-radius: 100px;
+    color: turquoise;
+    overflow: hidden;
+}
+
+.stats_label {
+    color: turquoise;
+}
+
+.stats-wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin-bottom: 1.75em;
+}
+
+.stats-wrapper > div {
+    margin-bottom: .75em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal .description_label {
+    color: turquoise;
 }
