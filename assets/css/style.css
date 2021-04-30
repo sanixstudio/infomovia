@@ -3,7 +3,7 @@
     --roboto: 'Roboto', sans-serif;
     --darkBG: #090909;
     --lightDarkBG: #212529;
-    --secondLightDarkBG: #111;
+    --secondLightDarkBG: rgb(145, 54, 54);
     --turquoise: #0bc9c1;
     --f-light: #ddd;
     --start: #e4bb24;
@@ -20,7 +20,7 @@ body:not(p) {
     position: relative;
     color: #fff;
     align-items: center;
-    background: var(--secondLightDarkBG);
+    background: var(--darkBG);
 }
 
 h1,
@@ -45,9 +45,8 @@ ul {
     background: var(--darkBG);
 }
 
-.bgDark {
-  background: var(--darkBG);  
-} 
+::-webkit-scrollbar-thumb {background-color: #0bc9c1 !important;}
+::-webkit-scrollbar-track {background-color: #0bc9c1 !important;}
 
 /****************************/
 /* ======== HEADER ======== */
@@ -55,15 +54,14 @@ ul {
 
 header {
     font-family: var(--poppins);
-    background: #111;
+    background: #090909;
     display: flex;
     height: 80px;
     justify-content: space-between;
     align-items: center;
     padding: 0 1em;
     width: 100%;
-    z-index: 10;
-    background: #131313;
+    z-index: 100;
     top: 0;
     left: 0;
     right: 0;
@@ -209,7 +207,7 @@ header input[type="text"]:hover {
     width: 100%;
     height: 750px;
     margin-top: 5em;
-    margin-bottom: 6em;
+    margin-bottom: 4em;
     overflow: hidden;
 }
 
@@ -220,6 +218,7 @@ header input[type="text"]:hover {
     height: 750px;
     overflow: hidden;
     justify-content: center;
+    margin-top: 1em;
     align-items: center;
     flex-direction: column;
 }
@@ -228,17 +227,14 @@ header input[type="text"]:hover {
     position: relative;
 }
 
-.floating-info {
-    bottom: 0;
-    width: 100%;
-    padding: 2em;
+.carousel-img::before {
     position: absolute;
+    content: "";
+    background-image: linear-gradient(var(--darkBG), transparent);
+    top: 0;
+    width: 100%;
+    height: 50%;
     z-index: 10;
-    background-image: linear-gradient(transparent, #111 50%);
-}
-
-.floating-info p{
-    width: 60%;
 }
 
 .hide {
@@ -294,7 +290,7 @@ header input[type="text"]:hover {
 }
 
 .grid img, .movie-info-container > div img {
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.699);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.315);
     border-radius: 7px;
 }
 
@@ -338,14 +334,31 @@ footer {
     gap: 1em;
 }
 
+.movie-title {
+    font-size: 2rem;
+    text-shadow: 0 0 1px #000;
+}
+
 .stats-lables {
     font-weight: normal;
     display: inline-block;
     width: 150px;
 }
 
-.movie-overview {
-    margin: 1em 0;
+.floating-info {
+    bottom: 0;
+    color: #ccc;
+    width: 100%;
+    padding-left: 4em;
+    padding-bottom: 3em;
+    font-size: 1.2rem;
+    position: absolute;
+    z-index: 10;
+    background-image: linear-gradient(transparent, #090909 70%);
+}
+
+.overview {
+    width: 50%;
 }
 
 .stats img {

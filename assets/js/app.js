@@ -44,10 +44,12 @@ getMoviesCategory(URL_TOP_RATED, ".top_rated");
 ********************************/
 
 const allSectionsLink = document.querySelectorAll('#playing_now_link, #upcoming_link, #top_rated_link');
+const hero = document.querySelector('.hero');
 
 for (let link of allSectionsLink) {
     link.addEventListener('click', () => {
-        const DomElements = document.querySelectorAll('.hero, #playing_now, #upcoming, #top_rated');
-        for(let div of DomElements) div.style.display = "block";
+        hero.style.display = 'flex';
+        const DomElements = document.querySelectorAll('#playing_now, #upcoming, #top_rated');
+        for(let div of DomElements) div.style.display = "unset";
     });
 }

@@ -44,6 +44,7 @@ searchForm.addEventListener('submit', async(e) => {
                             alt=${ (thePosterUrl) }>
                         </div>`;
             main.append
+
             searchResultDisplay.innerHTML += temp;
         }
     } catch(err){ console.log(err) }
