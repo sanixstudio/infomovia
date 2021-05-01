@@ -14,8 +14,6 @@ const getMoviesCategory = async (category, selector) => {
     try {
         const res = await (await fetch(category)).json();
 
-        console.log(res.results);
-
         for (let movie of res.results) {
             let thePosterUrl = "";
 
@@ -64,16 +62,7 @@ for (let link of allSectionsLink) {
 
 document.addEventListener('click', (e) => {
     const modal_backdrop = document.querySelector('.modal_backdrop')
-
-
-    if (modal_backdrop.style.display === 'unset') {
-        console.log(e.target.className);
-
-        if (e.target.className === 'modal_backdrop') modal_backdrop.style.display = 'none';
-
-        // modal stats-wrapper stat_label title description_label description
-    }
-
+    if (modal_backdrop.style.display === 'unset') if (e.target.className === 'modal_backdrop') modal_backdrop.style.display = 'none'
 });
 
 /************************************************************
@@ -111,9 +100,6 @@ function getModalData() {
                         </div>
                         <h3 class="description_label">&#127916; Overview</h3>
                         <p class="description">${overview}</p>`
-
-
-            console.log(img, popularity, title, vote_count, vote_average, overview);
 
             const modal_backdrop = document.querySelector('.modal_backdrop')
             const modal = document.querySelector('.modal')

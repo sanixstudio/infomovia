@@ -4,10 +4,18 @@
 const searchResultDisplay = document.querySelector('.search-results');
 const searchForm = document.querySelector('#theForm');
 const keywords = document.querySelector('#keywords');
+const searchBtn = document.querySelector('#searchBtn');
 
 let searchQuery = "";
 
-searchForm.addEventListener('submit', async (e) => {
+searchForm.addEventListener('submit', searchKeyword);
+searchBtn.addEventListener('click', searchKeyword);
+
+/************************************************************
+                Search keywords function
+************************************************************/
+
+async function searchKeyword(e) {
     e.preventDefault();
 
     (keywords.value !== "") ?
@@ -51,5 +59,6 @@ searchForm.addEventListener('submit', async (e) => {
             searchResultDisplay.innerHTML += temp;
         }
     } catch (err) { console.log(err) }
+
     getModalData()
-});
+}
