@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap');
 :root {
     --poppins: 'Poppins', sans-serif;
     --roboto: 'Roboto', sans-serif;
@@ -12,7 +13,11 @@
 
 html {
     scroll-behavior: smooth;
-  }
+}
+
+body {
+    font-family: 'Poppins', sans-serif;;
+}
 
 body:not(p) {
     font-family: var(--roboto);
@@ -140,6 +145,7 @@ header input[type="text"]:hover {
     color: var(--white);
     padding: 1.6em;
     cursor: pointer;
+    font-size: .9rem;
 }
 
 .nav a:hover,
@@ -210,7 +216,7 @@ header input[type="text"]:hover {
 .bgDynamic{
     width: 100%;
     height: 750px;
-    margin-top: 5em;
+    margin-top: 3em;
     margin-bottom: 4em;
     overflow: hidden;
 }
@@ -229,16 +235,10 @@ header input[type="text"]:hover {
 
 .carousel-img img {
     position: relative;
-}
-
-.carousel-img::before {
-    position: absolute;
-    content: "";
-    /* background-image: linear-gradient(var(--darkBG), transparent); */
-    top: 0;
+    max-height: 730px;
     width: 100%;
-    height: 50%;
-    z-index: 10;
+    object-position: 0 20%;
+    object-fit: cover;
 }
 
 .carousel-img::after {
@@ -372,7 +372,10 @@ footer {
     font-size: 1.2rem;
     position: absolute;
     z-index: 10;
-    /* background-image: linear-gradient(transparent, #090909); */
+}
+
+.floating-info .overview {
+    font-weight: 100;
 }
 
 .overview {
@@ -525,4 +528,10 @@ footer {
 .modal .description_label {
     color: turquoise;
     font-weight: normal;
+}
+
+@media (max-width: 1020px) {
+    header {
+        background: teal;
+    } 
 }
