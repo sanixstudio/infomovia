@@ -13,9 +13,6 @@ const URL_TOP_RATED = `${URL_BASE}movie/top_rated?language=en-US&api_key=${API_K
 const getMoviesCategory = async (category, selector) => {
     try {
         const res = await (await fetch(category)).json();
-
-        console.log(res.results);
-
         searchResultDisplay.innerHTML = "";
 
         for (let movie of res.results) {
@@ -62,7 +59,7 @@ for (let link of allSectionsLink) {
     });
 }
 
-//////////////////////////////////////////////////////////////
+// Hide Modal when click outside modal area
 
 document.addEventListener('click', (e) => {
     const modal_backdrop = document.querySelector('.modal_backdrop')
