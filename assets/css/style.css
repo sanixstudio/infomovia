@@ -46,7 +46,6 @@ ul {
 }
 
 ::-webkit-scrollbar-thumb {background-color: #0bc9c1 !important;}
-::-webkit-scrollbar-track {background-color: #0bc9c1 !important;}
 
 /****************************/
 /* ======== HEADER ======== */
@@ -235,7 +234,7 @@ header input[type="text"]:hover {
 .carousel-img::before {
     position: absolute;
     content: "";
-    background-image: linear-gradient(var(--darkBG), transparent);
+    /* background-image: linear-gradient(var(--darkBG), transparent); */
     top: 0;
     width: 100%;
     height: 50%;

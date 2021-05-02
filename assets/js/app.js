@@ -14,6 +14,10 @@ const getMoviesCategory = async (category, selector) => {
     try {
         const res = await (await fetch(category)).json();
 
+        console.log(res.results);
+
+        searchResultDisplay.innerHTML = "";
+
         for (let movie of res.results) {
             let thePosterUrl = "";
 
@@ -69,12 +73,12 @@ document.addEventListener('click', (e) => {
                 Get Modal Data Function
 ************************************************************/
 function getModalData() {
-    let img = "IMG";
-    let title = "TITLE";
-    let popularity = "POP";
-    let vote_average = "VOTE AVG";
-    let vote_count = "VOTE COUNT";
-    let release_date = "RELEASE DATE";
+    let img = "";
+    let title = "";
+    let popularity = "";
+    let vote_average = "";
+    let vote_count = "";
+    let release_date = "";
     let overview = "";
 
     const posters = document.querySelectorAll('.poster');
@@ -88,7 +92,6 @@ function getModalData() {
             vote_count = e.target.attributes["data-vote_count"].value
             overview = e.target.attributes["data-overview"].value
             release_date = e.target.attributes["data-release_date"].value
-
 
             let temp = `<div><img src=${img} alt=""></div>
                         <h2 class="title">${title}</h2>

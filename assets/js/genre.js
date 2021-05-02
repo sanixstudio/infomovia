@@ -1,4 +1,3 @@
-
 const genres =  [
     {
         id: 12,
@@ -77,3 +76,43 @@ const genres =  [
         name: "TV Movie"
     }
 ]
+
+async function getMoviesForGenre(id=14) {
+    const URL = `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&with_genres=${id}`
+
+    try {
+        const res = await (await fetch(URL)).json();
+        // console.log(res.results);
+        const DomElements = document.querySelectorAll('.hero, #playing_now, #upcoming, #top_rated');
+        for (let div of DomElements) div.style.display = "none";
+        searchResultDisplay.innerHTML = "";
+
+        for (let movie of res.results) {
+            let thePosterUrl = "";
+
+            movie.poster_path === null ?
+                thePosterUrl = "https://via.placeholder.com/185/000000/FFFFFF/?text=NO-IMAGE" :
+                thePosterUrl = URL_IMG + movie.poster_path;
+
+            let temp = `<div><img 
+                        data-title="${movie.title}"
+                        data-popularity="${movie.popularity}"
+                        data-img="${thePosterUrl}" 
+                        data-overview="${movie.overview}" 
+                        data-vote_average="${movie.vote_average}" 
+                        data-vote_count="${movie.vote_count}" 
+                        data-release_date="${movie.release_date}" 
+                        class="poster" src=${thePosterUrl} alt=""></div>`;
+            searchResultDisplay.innerHTML += temp;
+        }
+    } catch (err) { console.log(err) }
+}
+
+/////////////////////////////////////////////////////////
+const genreBtns = document.querySelectorAll('.genre-btn')
+for (let genreBtn of genreBtns) { 
+    genreBtn.addEventListener('click', (e) => {
+        let genreId = e.target.dataset.genre;
+        getMoviesForGenre(genreId)
+    })
+ }
