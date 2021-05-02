@@ -109,19 +109,11 @@
 
     <!-- Modal -->
     <div class="modal_backdrop">
-        <div class="modal">
-            <!-- <div><img src="https://image.tmdb.org/t/p/w185//h8Rb9gBr48ODIwYUttZNYeMWeUU.jpg" alt=""></div>
-            <h2 class="title">Demon Slayer (2021)</h2>
-            <div class="stats-wrapper">
-                <div><label class="stats_label">Popularity:</label><span class="stats">&#8605; 14.539</span></div>
-                <div><label class="stats_label">Vote Count:</label><span class="stats">&#9878; 1811</span></div>
-                <div><label class="stats_label">Average Vote:</label><span class="stats"><i class="fas fa-poll"></i> 6.4</span></div>
-                <div><label class="stats_label">Release Date:</label><span class="stats"><i class="far fa-calendar-alt"></i> 1993-06-18</span></div>
-            </div>
-            <h3 class="description_label">&#127916; Overview</h3>
-            <p class="description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam, voluptatum labore 
-                tempore iusto ipsa esse, exercitationem tenetur aperiam consequatur inventore voluptatem 
-                ullam, molestias repellendus adipisci voluptates distinctio ipsum odit excepturi.</p> -->
+        <div class="modal your-element" 
+            data-tilt data-tilt-max="5" 
+            data-tilt-speed="400" 
+            glare="false"
+            data-tilt-perspective="500">
         </div>
     </div>
 
@@ -132,9 +124,17 @@
         </footer>
     </div>
 
+    <script src="./assets/js/vanilla-tilt.js"></script>
     <script src="./assets/js/app.js"></script>
     <script src="./assets/js/search.js"></script>
     <script src="./assets/js/carousel.js"></script>
+
+    <script type="text/javascript">
+        VanillaTilt.init(document.querySelector(".modal"), {
+            max: 25,
+            speed: 400
+        });
+    </script>
 
     <!-- Arrow up button script  -->
     <script>

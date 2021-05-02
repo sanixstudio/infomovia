@@ -43,6 +43,48 @@ const getMoviesCategory = async (category, selector) => {
         console.log(err);
     }
 
+    let img = "IMG";
+    let title = "TITLE";
+    let popularity = "POP";
+    let vote_average = "VOTE AVG";
+    let vote_count = "VOTE COUNT";
+    let release_date = "RELEASE DATE";
+    let overview = "";
+
+    const posters = document.querySelectorAll('.poster');
+
+    for(poster of posters) {
+        poster.addEventListener('click', (e) => {
+            img = e.target.attributes["data-img"].value
+            title = e.target.attributes["data-title"].value
+            popularity = e.target.attributes["data-popularity"].value
+            vote_average = e.target.attributes["data-vote_average"].value
+            vote_count = e.target.attributes["data-vote_count"].value
+            overview = e.target.attributes["data-overview"].value
+            release_date = e.target.attributes["data-release_date"].value
+
+
+            let temp = `<div><img src=${img} alt=""></div>
+            <h2 class="title">${title}</h2>
+            <div class="stats-wrapper">
+                <div><label class="stats_label">Popularity:</label><span class="stats">&#8605; ${popularity}</span></div>
+                <div><label class="stats_label">Vote Count:</label><span class="stats">&#9878; ${vote_count}</span></div>
+                <div><label class="stats_label">Average Vote:</label><span class="stats"><i class="fas fa-poll"></i> ${vote_average}</span></div>
+                <div><label class="stats_label">Release Date:</label><span class="stats"><i class="far fa-calendar-alt"></i> ${release_date}</span></div>
+            </div>
+            <h3 class="description_label">&#127916; Overview</h3>
+            <p class="description">${overview}</p>`
+
+
+            console.log(img, popularity, title, vote_count, vote_average, overview);
+
+            const modal_backdrop = document.querySelector('.modal_backdrop')
+            const modal = document.querySelector('.modal')
+
+            modal_backdrop.style.display = "unset"
+            modal.innerHTML = temp;
+        });
+    }
 };
 
 // Display the movies to dom
