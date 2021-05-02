@@ -8,29 +8,40 @@ This is a pure custom vanilla js front-end api based app.
 
 ## Demo
 
-# Tech used
- - ## HTML
-    - Basic markup and element structure. Links to external resources and meta setup
- - ## CSS
-  - 
- - ## JS
+# Tech / Tools used
+ - HTML
+ - CSS
+ - Grid Layout and Flex-box
+ - JavaScript
+ - Fetch
+ - Async Approach for calls
+ - API (TMDB)
+ - Error Handling
+ - Exception Handling
 
 # App Features
 ```
-Search by keywords
+🔎 Search by keywords:
+   1. Users can find movies or TV-shows information by typing keywords
+   2. Keyword can be submitted by either Pressing Enter or Clicking on Magnifying glass icon
 ```
 ![Category](./assets/images/github_resources/search.png)
 
 - - -
 ```
-Search by Genre
+🔎 Search by Genre
+   1. Users can find movies or TV-shows information by genre
+   2. Genre Link are available in the Header main navigation's drop-down menu
 ```
 ![Category](./assets/images/github_resources/genre.png)
 
 - - -
 
 ```
-Search by Categories
+🔎 Search by Categories
+   1. User can also find their favorite movies and tv-shows information by category list
+   2. Category list are provided on the main landing page or can be navigated-to using 
+      the header' main Navigation links
 ```
 ![Category](./assets/images/github_resources/category.png)
 
@@ -40,17 +51,11 @@ Search by Categories
 # Final Image
 ![Category](./assets/images/github_resources/screenShot.png)
 
-- - -
-
  # Modal
 ![Category](./assets/images/github_resources/modal.png)
 
-- - -
-
  # Carousel
 ![Category](./assets/images/github_resources/carousel.png)
-
-- - -
 
 # Project Break Down
  1. Design / Figma Wire-frame
