@@ -106,9 +106,10 @@ async function getMoviesForGenre(id=14) {
             searchResultDisplay.innerHTML += temp;
         }
     } catch (err) { console.log(err) }
+    getModalData()
 }
 
-/////////////////////////////////////////////////////////
+/*--------------------------------------------------------*/
 const genreBtns = document.querySelectorAll('.genre-btn')
 for (let genreBtn of genreBtns) { 
     genreBtn.addEventListener('click', (e) => {
