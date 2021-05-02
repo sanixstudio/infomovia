@@ -8,6 +8,8 @@ This is a pure custom vanilla js front-end api based app.
 
 ## Demo
 
+### 🔗 [Demo Link](adnanniaz77.github.io/movie-mania/)
+
 # Tech / Tools used
  - HTML
  - CSS
@@ -20,29 +22,23 @@ This is a pure custom vanilla js front-end api based app.
  - Exception Handling
 
 # App Features
-```
-🔎 Search by keywords:
+## 🔎 Search by keywords:
    1. Users can find movies or TV-shows information by typing keywords
    2. Keyword can be submitted by either Pressing Enter or Clicking on Magnifying glass icon
-```
 ![Category](./assets/images/github_resources/search.png)
 
 - - -
-```
-🔎 Search by Genre
+## 🔎 Search by Genre
    1. Users can find movies or TV-shows information by genre
    2. Genre Link are available in the Header main navigation's drop-down menu
-```
 ![Category](./assets/images/github_resources/genre.png)
 
 - - -
 
-```
-🔎 Search by Categories
+## 🔎 Search by Categories
    1. User can also find their favorite movies and tv-shows information by category list
    2. Category list are provided on the main landing page or can be navigated-to using 
       the header' main Navigation links
-```
 ![Category](./assets/images/github_resources/category.png)
 
 
