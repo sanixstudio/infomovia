@@ -148,4 +148,22 @@ async function getVideoSource(id) {
 
 const trailerBackdrop = document.querySelector('.trailer_backdrop');
 const closeBtn = document.querySelector('.closeBtn');
-closeBtn.addEventListener('click', () => trailerBackdrop.style.display = "none")
+
+closeBtn.addEventListener('click', () => {
+    const theIframe = document.querySelector('iframe');
+    trailerBackdrop.style.display = "none";
+    theIframe.src = "";
+    stopVideo(document)
+});
+
+var stopVideo = function (element) {
+    var iframe = element.querySelector('iframe');
+    var video = element.querySelector('video');
+    if (iframe !== null) {
+        var iframeSrc = iframe.src;
+        iframe.src = iframeSrc;
+    }
+    if (video !== null) {
+        video.pause();
+    }
+};
