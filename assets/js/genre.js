@@ -95,6 +95,7 @@ async function getMoviesForGenre(id=14) {
                 thePosterUrl = URL_IMG + movie.poster_path;
 
             let temp = `<div><img 
+                        data-movieId="${movie.id}"
                         data-title="${movie.title}"
                         data-popularity="${movie.popularity}"
                         data-img="${thePosterUrl}" 
