@@ -46,6 +46,7 @@ async function searchKeyword(e) {
 
             // const main = document.querySelector('main');
             let temp = `<div><img 
+                        data-movieId="${movie.id}"
                         data-title="${movie.title}"
                         data-popularity="${movie.popularity}"
                         data-img="${thePosterUrl}" 

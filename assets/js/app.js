@@ -125,6 +125,9 @@ async function getVideoSource(id) {
 
     try {
         const res = await (await fetch(URL)).json();
+
+        console.log(res)
+
         YT_Key = res.results[0].key;
         const YouTubeLink = `${PreviewLink}${YT_Key}?rel=0`
 
@@ -139,7 +142,7 @@ async function getVideoSource(id) {
         console.log(modalBackdrop)
 
     } catch (error) {
-        console.log(error)
+        console.log(error.message)
     }
 }
 
