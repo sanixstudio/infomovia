@@ -617,10 +617,6 @@ footer {
         left: calc(50% - 150px);
     }
 
-    .grid {
-        background: #333;
-    }
-
     .hero .floating-info {
         margin: 0;
         padding-left: 2em;
@@ -643,5 +639,20 @@ footer {
      width: 95%;
      left: 0;
      right: 0;  
+    }
+}
+
+@media (max-width: 460px) {
+    .col {
+        align-items: center;
+        justify-content: center;
+        text-decoration-line: center;
+        background: #101010;
+    }
+
+    .col > * {
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
 }
