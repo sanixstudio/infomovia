@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap');
+
 :root {
     --poppins: 'Poppins', sans-serif;
     --roboto: 'Roboto', sans-serif;
-    --darkBG: #090909;
+    --darkBG: #101010;
+    --darkBG: #101010;
     --lightDarkBG: #212529;
     --secondLightDarkBG: rgb(145, 54, 54);
     --turquoise: #0bc9c1;
@@ -48,9 +50,8 @@ ul {
 .container {
     width: 100%;
     background: var(--darkBG);
+    overflow: hidden;
 }
-
-::-webkit-scrollbar-thumb {background-color: #0bc9c1 !important;}
 
 /****************************/
 /* ======== HEADER ======== */
@@ -58,7 +59,7 @@ ul {
 
 header {
     font-family: var(--poppins);
-    background: #090909;
+    background: var(--darkBG);
     display: flex;
     height: 80px;
     justify-content: space-between;
@@ -80,6 +81,12 @@ header {
 .max-width-1280 {
     max-width: 1280px;
     margin: 0 auto;
+}
+
+header .logo img {
+    width: 200px;
+    height: 66px;
+    object-fit: contain;
 }
 
 .search-bar {
@@ -130,6 +137,15 @@ header input[type="text"]:hover {
     margin: 8em 0;
 }
 
+.toggleBtn {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    z-index: inherit;
+    font-size: 1.5rem;
+    display: none;
+}
+
 .nav {
     display: flex;
     position: relative;
@@ -166,7 +182,6 @@ header input[type="text"]:hover {
     transform: scaleX(0);
     transform-origin: left;
     background: var(--lightDarkBG);
-    flex-direction: column;
     transition: transform ease .3s !important;
     top: 70%;
     border-radius: 10px;
@@ -279,7 +294,6 @@ header input[type="text"]:hover {
     padding: .3em .5em;
     border-radius: 5px;
 }
-
 
 /* ======== MAIN ======== */
 
@@ -532,6 +546,102 @@ footer {
 
 @media (max-width: 1020px) {
     header {
-        background: teal;
+        width: 100%;
     } 
+
+    .logo {
+        justify-self: left;
+    }
+
+    #theForm {
+        position: absolute;
+        width: 100%;
+        top: 100%;
+        margin: 0;
+        padding: 0;
+        left: 0;
+        display: flex;
+        height: 50px;
+        background: #101010;
+    }
+
+    .search-bar{
+        width: 450px;
+        left: calc(50% - 240px);
+    }
+
+    .fa-search {
+        top: calc(50% - .7em);
+    }
+
+    .nav {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .hero {
+        font-size: .9rem;
+    }
+
+    .overview {
+        font-size: .8rem;
+    }
+
+    .genre-list {
+        font-size: .9rem;
+    }
+}
+
+@media (max-width: 720px) {
+    .nav {
+        flex-direction: column;
+        background: #000;
+        position: absolute;
+        top: 0;
+        right: 0;
+        text-align: center;
+        display: none;
+    }
+
+    .toggleBtn {
+        display: unset;
+    }
+
+    .dropdown-container {
+        width: 100%;
+        text-align: center;
+    }
+
+    .dropdown-menu {
+        left: calc(50% - 150px);
+    }
+
+    .grid {
+        background: #333;
+    }
+
+    .hero .floating-info {
+        margin: 0;
+        padding-left: 2em;
+        padding-right: 2em;
+        padding-bottom: 4em;
+    }
+
+    .hero .overview {
+        width: 100%;
+    }
+
+    .grid .section {
+        padding: 0;
+        margin: 0;
+    }
+}
+
+@media (max-width: 720px) {
+    .search-bar {
+     width: 95%;
+     left: 0;
+     right: 0;  
+    }
 }

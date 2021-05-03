@@ -26,6 +26,9 @@
                         <i class="fas fa-search" id="searchBtn"></i>
                     </div>  
                 </form>
+                <div class="toggleBtn">
+                    <i class="fas fa-bars"></i>
+                </div>
                 <div class="nav">
                     <div class="dropdown-container">
                         <a class="dropdown-menu-btn">Genre</a>
@@ -138,6 +141,21 @@
                 arrowBtn.style.transform = "translateY(8em)";
         });
         arrowBtn.addEventListener('click', () => window.scrollTo(0, 0));
+        
+        const nav = document.querySelector('.nav');
+        const toggleBtn = document.querySelector('.toggleBtn');
+
+        toggleBtn.addEventListener('click', (e) => {
+            if (nav.style.display !== 'unset') {
+                nav.style.display = 'unset';
+                let timesIcn =  `<i class="fas fa-times"></i>`;
+                toggleBtn.innerHTML = timesIcn;
+            } else {
+                nav.style.display = 'none';
+                let timesIcn =  `<i class="fas fa-bars"></i>`;
+                toggleBtn.innerHTML = timesIcn;
+            }            
+        });
     </script>
 </body>
 </html>

@@ -74,7 +74,7 @@ const getMoviesForCarousel = async () => {
                                         <span class="rating"><i class="fas fa-star"></i>${popularity}</span>
                                         <span class="genre-sec">
                                         ${genre_ids.map(id => {
-                                            return `<span>${getGenre(id)}</span>`
+                                            return `<span class="genre-list">${getGenre(id)}</span>`
                                         })}
                                     </div>
                                     <p class="overview">
