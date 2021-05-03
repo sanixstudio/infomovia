@@ -490,7 +490,7 @@ footer {
     position: relative;
     box-shadow: 0 0 5em #000;
     border-radius: 10px;
-    margin-top: 6em;
+    margin-top: 8em;
 }
 
 .modal .title {
@@ -502,7 +502,47 @@ footer {
 .modal .description {
     line-height: 160%;
     text-align: justify;
-    max-width: 500px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    -webkit-box-orient: vertical;
+    position: relative;
+}
+
+.modal .description::before {
+    content: 'Read more...';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: yellow;
+    padding: 0 1em;
+    background: #101010f3;
+}
+
+.modal .description:hover {
+    display: unset;
+    overflow: visible;
+}
+
+.modal .description:hover::before {
+    content: '';
+}
+
+.watchTrailerBtn {
+    margin: 1em 0;
+    border: none;
+    padding: .5em 1em;
+    display: flex;
+    gap: .75em;
+    border-radius: 3px;
+    cursor: pointer;
+    background: rgba(242, 194, 23, 1);
+    background: rgba(242, 194, 23, 1);
+}
+
+.watchTrailerBtn .fa-film {
+    font-size: 1.25rem;
 }
 
 .modal img {
@@ -542,6 +582,47 @@ footer {
 .modal .description_label {
     color: turquoise;
     font-weight: normal;
+}
+
+.trailer_backdrop {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.closeBtn {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: rgba(31, 31, 31, 0.692);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    top: 4em;
+    cursor: pointer;
+    border: 1px solid #333;
+    left: 50%;
+}
+
+.closeBtn:hover {
+    background: #aaa;
+}
+
+.trailer_backdrop iframe {
+    width: 100%;
+    height: 60%;
+    border: none;
+    position: absolute;
+    top: calc(50% - 30%);
 }
 
 @media (max-width: 1020px) {

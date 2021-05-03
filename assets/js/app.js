@@ -1,4 +1,4 @@
-const OMDB_API_KEY = "7d74346a";
+// const OMDB_API_KEY = "7d74346a";
 const API_KEY = "1dc3a1bc9c9d1a12ed9931344d82ebc1";
 const URL_BASE = "https://api.themoviedb.org/3/";
 const URL_IMG = "https://image.tmdb.org/t/p/w185/";
@@ -24,6 +24,7 @@ const getMoviesCategory = async (category, selector) => {
 
             const className = document.querySelector(selector);
             let temp = `<div><img 
+                        data-movieId="${movie.id}"
                         data-title="${movie.title}"
                         data-popularity="${movie.popularity}"
                         data-img="${thePosterUrl}" 
@@ -70,6 +71,7 @@ document.addEventListener('click', (e) => {
                 Get Modal Data Function
 ************************************************************/
 function getModalData() {
+    let movieId = "";
     let img = "";
     let title = "";
     let popularity = "";
@@ -82,6 +84,7 @@ function getModalData() {
 
     for (poster of posters) {
         poster.addEventListener('click', (e) => {
+            movieId = e.target.attributes["data-movieId"].value
             img = e.target.attributes["data-img"].value
             title = e.target.attributes["data-title"].value
             popularity = e.target.attributes["data-popularity"].value
@@ -99,13 +102,47 @@ function getModalData() {
                             <div><label class="stats_label">Release Date:</label><span class="stats"><i class="far fa-calendar-alt"></i> ${release_date}</span></div>
                         </div>
                         <h3 class="description_label">&#127916; Overview</h3>
-                        <p class="description">${overview}</p>`
+                        <p class="description">${overview}</p>
+                        <button class="watchTrailerBtn" onClick=getVideoSource(${movieId})><i class="fas fa-film"></i>Watch Trailer</button>`
 
             const modal_backdrop = document.querySelector('.modal_backdrop')
             const modal = document.querySelector('.modal')
 
             modal_backdrop.style.display = "unset"
             modal.innerHTML = temp;
+
         });
     }
 }
+
+async function getVideoSource(id) {
+    let YT_Key = "";
+    const URL = `https://api.themoviedb.org/3/movie/${id}/videos?&api_key=${API_KEY}`;
+    const PreviewLink = `https://www.youtube.com/embed/`
+    const modalBackdrop = document.querySelector('.modal_backdrop');
+
+    modalBackdrop.style.display = 'none';
+
+    try {
+        const res = await (await fetch(URL)).json();
+        YT_Key = res.results[0].key;
+        const YouTubeLink = `${PreviewLink}${YT_Key}?rel=0`
+
+        const trailerBackdrop = document.querySelector('.trailer_backdrop');
+        let iFrame = document.createElement('iframe');
+        iFrame.src = YouTubeLink
+        iFrame.setAttribute('allowFullScreen', 'true')
+
+        trailerBackdrop.appendChild(iFrame);
+        trailerBackdrop.style.display = "unset"
+
+        console.log(modalBackdrop)
+
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+const trailerBackdrop = document.querySelector('.trailer_backdrop');
+const closeBtn = document.querySelector('.closeBtn');
+closeBtn.addEventListener('click', () => trailerBackdrop.style.display = "none")
