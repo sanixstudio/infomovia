@@ -66,9 +66,6 @@ const getMoviesForCarousel = async () => {
             thePosterUrl = "https://via.placeholder.com/185/000000/FFFFFF/?text=NO-IMAGE" :
             thePosterUrl = URL_POSTER + movie.poster_path;
 
-        let browser  = detectBrowser();
-        console.log(browser);
-
         const heroHTML = `<div class="carousel-item">
                                 <div class="carousel-img"><img class="fireFoxImg" src=${thePosterUrl} data-bg=${thePosterUrl} alt=""></div>
                                 <div class="floating-info">
@@ -85,40 +82,17 @@ const getMoviesForCarousel = async () => {
                                     </p>
                                 </div>
                             </div>`
-        
-        
         hero.innerHTML += heroHTML
     });
 
-    function detectBrowser() { 
-        if((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) != -1 ) {
-            return 'Opera';
-        } else if(navigator.userAgent.indexOf("Chrome") != -1 ) {
-            return 'Chrome';
-        } else if(navigator.userAgent.indexOf("Safari") != -1) {
-            return 'Safari';
-        } else if(navigator.userAgent.indexOf("Firefox") != -1 ){
-            return 'Firefox';
-        } else if((navigator.userAgent.indexOf("MSIE") != -1 ) || (!!document.documentMode == true )) {
-            return 'IE';//crap
-        } else {
-            return 'Unknown';
-        }
-    } 
-
-    /*----------------------------------------------------*/
-    
-    // Firefox Fix
-    
-   
-    
-    /*----------------------------------------------------*/
-
+    // Make an Array of all the carousel Items
     const figures = Array.prototype.slice.call(document.querySelectorAll('.carousel-item'))
 
+    // Hide the all the carousel-item
     figures.forEach(figure => figure.classList.add('hide'))
     figures[currentCarouselItem].classList.remove('hide')
 
+    // Now show the carousel-item one by one
     setInterval(() => {
         // Hide previous Item if current index is greater than 1
         if (currentCarouselItem >= 1) { figures[currentCarouselItem - 1].classList.add('hide'); }

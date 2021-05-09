@@ -1,37 +1,38 @@
 [ ![Status][Badge-Status] ][Site-Page]
 
-# Movie Mania App
-We all love movies and TV-shows. Movie Mania is a place where you can find information about your favorite movies, currently playing, upcoming and popular movies/TV shows.
+![logo](./assets/images/infomovia.png) 
+# **InfoMovia** App
+## Description
+We all love movies and TV-shows and want ourselves to be updated about our favorite movies and tv shows day to day information. 
 
-## The App Description
-This is a pure custom vanilla js front-end api based app. 
+Movie Mania is a place where you can find information about your favorite movies, currently playing, upcoming and popular movies/TV shows. 
+
+This is a fully **📱 responsive, 💻 front-end, ⚙ vanilla js, and api** based project. 
 
 ## Demo
 
 ### 🔗 [Demo Link](adnanniaz77.github.io/movie-mania/)
 
 # Tech / Tools used
- - HTML
- - CSS
- - Grid Layout and Flex-box
- - JavaScript
- - Fetch
- - Async Approach for calls
- - API (TMDB)
- - Error Handling
- - Exception Handling
+ 1. [![html](https://img.shields.io/static/v1?label=Mark%20Down&message=HTML&color=orange&logo=html5)](https://www.w3schools.com/html/)
+ 2. [![CSS](https://img.shields.io/static/v1?label=Styling&message=CSS&color=blue&logo=css3)](https://www.w3schools.com/css/)
+ 3. ![js](https://img.shields.io/static/v1?label=Logic&message=JavaScript&color=yellow&logo=javascript)
+ 4. ![errors](https://img.shields.io/static/v1?label=Handling&message=Errors&color=red)
+ 5. ![exceptions](https://img.shields.io/static/v1?label=Handling&message=Exception&color=orange)
+ 6. ![api](https://img.shields.io/static/v1?label=API%20source&message=TMDB_API&color=inactive)
+ 7. ![errors](https://img.shields.io/static/v1?label=Handle%20API&message=Fetch%20Async%20Await&color=inactive)
 
 # App Features
 ## 🔎 Search by keywords:
    1. Users can find movies or TV-shows information by typing keywords
    2. Keyword can be submitted by either Pressing Enter or Clicking on Magnifying glass icon
-![Category](./assets/images/github_resources/search.png)
+![search](./assets/images/github_resources/search.png)
 
 - - -
 ## 🔎 Search by Genre
    1. Users can find movies or TV-shows information by genre
    2. Genre Link are available in the Header main navigation's drop-down menu
-![Category](./assets/images/github_resources/genre.png)
+![genre](./assets/images/github_resources/genre.png)
 
 - - -
 
@@ -45,13 +46,13 @@ This is a pure custom vanilla js front-end api based app.
 - - -
 
 # Final Image
-![Category](./assets/images/github_resources/screenShot.png)
+![final](./assets/images/github_resources/screenShot.jpg)
 
  # Modal
-![Category](./assets/images/github_resources/modal.png)
+![modal](./assets/images/github_resources/modal.png)
 
  # Carousel
-![Category](./assets/images/github_resources/carousel.png)
+![carousel](./assets/images/github_resources/carousel.png)
 
 # Project Break Down
  1. Design / Figma Wire-frame
@@ -62,6 +63,32 @@ This is a pure custom vanilla js front-end api based app.
  6. Exception
  7. Modals
 
+```
+Folder Structure
+assets
+|   |-- images
+|   |   |-- imdb.png
+|   |   |-- img1.png
+|   |   |-- img5.png
+|   |   |-- img6.png
+|   |   |-- infomovia.png
+|   |   |-- poster1.png
+|   |   |-- poster2.png
+|   |   +-- typography.md
+|   |
+|   |-- js
+|   |   |-- app.js
+|   |   |-- carousel.js
+|   |   |-- genre.js
+|   |   +-- search.md
+|   |
+|   |-- css
+|   |   |-- reset.css
+|   |   +-- style.css
+index.html
+README.md
+temp.html
+```
 
 [Badge-Status]: https://img.shields.io/badge/Status-In_Development-informational?style=for-the-badge
 [Badge-Contributors]: https://img.shields.io/badge/Contributors-4-lightgreen?style=for-the-badge
