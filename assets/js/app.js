@@ -167,3 +167,31 @@ var stopVideo = function (element) {
         video.pause();
     }
 };
+
+/************************************************************
+                    Arrow Up Logic
+************************************************************/
+const arrowBtn = document.querySelector('.arrow-up');
+const playing_now2 = document.querySelector('#playing_now');
+
+document.addEventListener("scroll", function(e) {
+    pageYOffset > 750 ?
+        arrowBtn.style.transform = "translateY(0)" :
+        arrowBtn.style.transform = "translateY(8em)";
+});
+arrowBtn.addEventListener('click', () => window.scrollTo(0, 0));
+
+const nav = document.querySelector('.nav');
+const toggleBtn = document.querySelector('.toggleBtn');
+
+toggleBtn.addEventListener('click', (e) => {
+    if (nav.style.display !== 'unset') {
+        nav.style.display = 'unset';
+        let timesIcn =  `<i class="fas fa-times"></i>`;
+        toggleBtn.innerHTML = timesIcn;
+    } else {
+        nav.style.display = 'none';
+        let timesIcn =  `<i class="fas fa-bars"></i>`;
+        toggleBtn.innerHTML = timesIcn;
+    }            
+});
