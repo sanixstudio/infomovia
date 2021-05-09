@@ -251,7 +251,7 @@ header input[type="text"]:hover {
 .carousel-img img {
     position: relative;
     max-height: 730px;
-    width: 100%;
+    width: 1280px;
     object-position: 0 20%;
     object-fit: cover;
 }
@@ -268,6 +268,10 @@ header input[type="text"]:hover {
     width: 100%;
     height: 50%;
     z-index: 10;
+}
+
+.fireFoxImg {
+    /* width: 1280px !important; */
 }
 
 .hide {
