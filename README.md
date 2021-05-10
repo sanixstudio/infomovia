@@ -14,18 +14,18 @@ This is a fully **📱 responsive, 💻 front-end, ⚙ vanilla js, and api** bas
 ### 🔗 [Demo Link](adnanniaz77.github.io/movie-mania/)
 
 # Tech / Tools used
- 1. [![html](https://img.shields.io/static/v1?label=Mark%20Down&message=HTML&color=orange&logo=html5)](https://www.w3schools.com/html/)
- 2. [![CSS](https://img.shields.io/static/v1?label=Styling&message=CSS&color=blue&logo=css3)](https://www.w3schools.com/css/)
- 3. [![js](https://img.shields.io/static/v1?label=Logic&message=JavaScript&color=yellow&logo=javascript)](https://www.w3schools.com/js/)
- 4. [![errors](https://img.shields.io/static/v1?label=Handling&message=Errors&color=red)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error)
- 5. [![exceptions](https://img.shields.io/static/v1?label=Handling&message=Exception&color=orange)](https://www.tutorialspoint.com/javascript/javascript_error_handling.htm)
- 6. [![api](https://img.shields.io/static/v1?label=API%20source&message=TMDB_API&color=inactive)](https://developers.themoviedb.org/3)
- 7. [![fetch](https://img.shields.io/static/v1?label=Handle%20API&message=Fetch%20Async%20Await&color=inactive)](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Async_await)
+ 1. [![html](https://img.shields.io/static/v1?label=Mark%20Down&message=HTML&color=orange&logo=html5&style=for-the-badge)](https://www.w3schools.com/html/)
+ 2. [![CSS](https://img.shields.io/static/v1?label=Styling&message=CSS&color=blue&logo=css3&style=for-the-badge)](https://www.w3schools.com/css/)
+ 3. [![js](https://img.shields.io/static/v1?label=Logic&message=JavaScript&color=yellow&logo=javascript&style=for-the-badge)](https://www.w3schools.com/js/)
+ 4. [![errors](https://img.shields.io/static/v1?label=Handling&message=Errors&color=red&style=for-the-badge)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error)
+ 5. [![exceptions](https://img.shields.io/static/v1?label=Handling&message=Exception&color=orange&style=for-the-badge)](https://www.tutorialspoint.com/javascript/javascript_error_handling.htm)
+ 6. [![api](https://img.shields.io/static/v1?label=API%20source&message=TMDB_API&color=inactive&style=for-the-badge)](https://developers.themoviedb.org/3)
+ 7. [![fetch](https://img.shields.io/static/v1?label=Handle%20API&message=Fetch%20Async%20Await&color=inactive&style=for-the-badge)](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Async_await)
 
 # App Features
 ## 🔎 Search by keywords:
    1. Users can find movies or TV-shows information by typing keywords
-   2. Keyword can be submitted by either Pressing Enter or Clicking on Magnifying glass icon
+   2. Keyword can be submitted by either Pressing Enter or Clicking on Magnifying glass icon 
 ![search](./assets/images/github_resources/search.png)
 
 - - -
