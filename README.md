@@ -9,9 +9,9 @@ This is a fully **📱 responsive, 💻 front-end, ⚙ vanilla js, and api** bas
 
 ## Demo
 
-### 🔗 [Demo Link](adnanniaz77.github.io/movie-mania/)
+### 🔗 [Demo Link](https://adnanniaz77.github.io/infomovia/)
 
-# Build with:
+# Built with:
  1. [![html](https://img.shields.io/static/v1?label=HTML5&message=Markup&color=orange&logo=html5&style=for-the-badge)](https://www.w3schools.com/html/)
  2. [![CSS](https://img.shields.io/static/v1?label=css3&message=Styling&color=blue&logo=css3&style=for-the-badge)](https://www.w3schools.com/css/)
  3. [![js](https://img.shields.io/static/v1?label=JavaScript&message=Language&color=yellow&logo=javascript&style=for-the-badge)](https://www.w3schools.com/js/)
@@ -102,7 +102,7 @@ temp.html
 
 
 
-[Badge-Status]: https://img.shields.io/badge/Status-In_Development-informational?style=for-the-badge
+[Badge-Status]: https://img.shields.io/badge/Status-Finalizing-informational?style=for-the-badge
 [Badge-Contributors]: https://img.shields.io/badge/Contributors-4-lightgreen?style=for-the-badge
 [Site-Page]: https://
 
