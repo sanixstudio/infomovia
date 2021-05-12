@@ -3,9 +3,7 @@
 ![logo](./assets/images/infomovia.png) 
 # **InfoMovia** App
 ## Description
-We all love movies and TV-shows and want ourselves to be updated about our favorite movies and tv shows day to day information. 
-
-Movie Mania is a place where you can find information about your favorite movies, currently playing, upcoming and popular movies/TV shows. 
+We all love to know latest information about our favorite Movies and TV shows. MovieMania enables you to find information about your favorite, currently playing, upcoming and popular movies/TV shows. 
 
 This is a fully **📱 responsive, 💻 front-end, ⚙ vanilla js, and api** based project. 
 
@@ -19,10 +17,10 @@ This is a fully **📱 responsive, 💻 front-end, ⚙ vanilla js, and api** bas
  3. [![js](https://img.shields.io/static/v1?label=JavaScript&message=Language&color=yellow&logo=javascript&style=for-the-badge)](https://www.w3schools.com/js/)
 
 # Tools Used
- - [![html](https://img.shields.io/static/v1?label=VScode&message=Editor&color=blue&logo=Visual%20Studio%20Code&style=for-the-badge)](https://https://code.visualstudio.com/)
- - [![html](https://img.shields.io/static/v1?label=github&message=version%20control&color=black&logo=GitHub&style=for-the-badge)](https://https://code.github.com/)
- - Font-awesome icons
- - TMDB API
+ - [![html](https://img.shields.io/badge/vscode-555?style=for-the-badge&logo=Visual%20Studio%20Code&logoColor=white)](https://https://code.visualstudio.com/)
+ - [![html](https://img.shields.io/badge/git/github-555?style=for-the-badge&logo=github&logoColor=white)](https://https://code.github.com/)
+ - [![html](https://img.shields.io/badge/Font%20Awesome%20icons-555?style=for-the-badge&logo=font%20awesome&logoColor=white)](https://https://code.github.com/)
+ - [![html](https://img.shields.io/badge/tmdb%20API-555?style=for-the-badge&logo=The%20Movie%20Database&logoColor=lime)](https://https://code.github.com/)
  4. [![errors](https://img.shields.io/static/v1?label=Handling&message=Errors&color=red&style=for-the-badge)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error)
  5. [![exceptions](https://img.shields.io/static/v1?label=Handling&message=Exception&color=orange&style=for-the-badge)](https://www.tutorialspoint.com/javascript/javascript_error_handling.htm)
  6. [![api](https://img.shields.io/static/v1?label=API%20source&message=TMDB_API&color=inactive&style=for-the-badge)](https://developers.themoviedb.org/3)
