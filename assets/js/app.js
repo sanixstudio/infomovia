@@ -146,6 +146,7 @@ async function getVideoSource(id) {
     }
 }
 
+// Close / Stop Trailer
 const trailerBackdrop = document.querySelector('.trailer_backdrop');
 const closeBtn = document.querySelector('.closeBtn');
 
