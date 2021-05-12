@@ -20,7 +20,7 @@ This is a fully **📱 responsive, 💻 front-end, ⚙ vanilla js, and api** bas
  - [![vscode](https://img.shields.io/badge/vscode-555?style=for-the-badge&logo=Visual%20Studio%20Code&logoColor=white)](https://code.visualstudio.com/)
  - [![github](https://img.shields.io/badge/git/github-555?style=for-the-badge&logo=github&logoColor=white)](https://code.github.com/)
  - [![fontawesome](https://img.shields.io/badge/Font%20Awesome%20icons-555?style=for-the-badge&logo=font%20awesome&logoColor=white)](https://fontawesome.com/icons)
- - [![tmdb](https://img.shields.io/badge/tmdb%20API-555?style=for-the-badge&logo=The%20Movie%20Database&logoColor=lime)](https://developers.themoviedb.org/3)
+ - [![tmdb](https://img.shields.io/badge/tmdb%20API-555?style=for-the-badge&logo=The%20Movie%20Database&logoColor=white)](https://developers.themoviedb.org/3)
 
 # Concepts Covered
  - 📑 DOM setup and reference
