@@ -34,38 +34,6 @@ This is a fully **📱 responsive, 💻 front-end, ⚙ vanilla js, and api** bas
  - Responsiveness (Mobile friendly)
  - 
 
-# App Features
-## 🔎 Search by keywords:
-   1. Users can find movies or TV-shows information by typing keywords
-   2. Keyword can be submitted by either Pressing Enter or Clicking on Magnifying glass icon 
-![search](./assets/images/github_resources/search.png)
-
-- - -
-## 🔎 Search by Genre
-   1. Users can find movies or TV-shows information by genre
-   2. Genre Link are available in the Header main navigation's drop-down menu
-![genre](./assets/images/github_resources/genre.png)
-
-- - -
-
-## 🔎 Search by Categories
-   1. User can also find their favorite movies and tv-shows information by category list
-   2. Category list are provided on the main landing page or can be navigated-to using 
-      the header' main Navigation links
-![Category](./assets/images/github_resources/category.png)
-
-
-- - -
-
-# Final Image
-![final](./assets/images/github_resources/screenShot.jpg)
-
- # Modal
-![modal](./assets/images/github_resources/modal.png)
-
- # Carousel
-![carousel](./assets/images/github_resources/carousel.png)
-
 # Project Break Down
  1. Design / Figma Wire-frame
  2. HTML Layout / structure / markup
@@ -101,6 +69,40 @@ index.html
 README.md
 temp.html
 ```
+
+# App Features
+## 🔎 Search by keywords:
+   1. Users can find movies or TV-shows information by typing keywords
+   2. Keyword can be submitted by either Pressing Enter or Clicking on Magnifying glass icon 
+![search](./assets/images/github_resources/search.png)
+
+- - -
+## 🔎 Search by Genre
+   1. Users can find movies or TV-shows information by genre
+   2. Genre Link are available in the Header main navigation's drop-down menu
+![genre](./assets/images/github_resources/genre.png)
+
+- - -
+
+## 🔎 Search by Categories
+   1. User can also find their favorite movies and tv-shows information by category list
+   2. Category list are provided on the main landing page or can be navigated-to using 
+      the header' main Navigation links
+![Category](./assets/images/github_resources/category.png)
+
+
+- - -
+
+# Final Image
+![final](./assets/images/github_resources/screenShot.jpg)
+
+ # Modal
+![modal](./assets/images/github_resources/modal.png)
+
+ # Carousel
+![carousel](./assets/images/github_resources/carousel.png)
+
+
 
 [Badge-Status]: https://img.shields.io/badge/Status-In_Development-informational?style=for-the-badge
 [Badge-Contributors]: https://img.shields.io/badge/Contributors-4-lightgreen?style=for-the-badge
