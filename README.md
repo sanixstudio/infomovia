@@ -3,7 +3,7 @@
 ![logo](./assets/images/infomovia.png) 
 # **InfoMovia** App
 ## Description
-We all love to know latest information about our favorite Movies and TV shows. MovieMania enables you to find information about your favorite, currently playing, upcoming and popular movies/TV shows. 
+We all love to know latest information about our favorite Movies and TV shows. InfoMoiva enables you to find information about your favorite, currently playing, upcoming and popular movies/TV shows. 
 
 This is a fully **📱 responsive, 💻 front-end, ⚙ vanilla js, and api** based project. 
 
@@ -17,23 +17,23 @@ This is a fully **📱 responsive, 💻 front-end, ⚙ vanilla js, and api** bas
  3. [![js](https://img.shields.io/static/v1?label=JavaScript&message=Language&color=yellow&logo=javascript&style=for-the-badge)](https://www.w3schools.com/js/)
 
 # Tools Used
- - [![html](https://img.shields.io/badge/vscode-555?style=for-the-badge&logo=Visual%20Studio%20Code&logoColor=white)](https://https://code.visualstudio.com/)
- - [![html](https://img.shields.io/badge/git/github-555?style=for-the-badge&logo=github&logoColor=white)](https://https://code.github.com/)
- - [![html](https://img.shields.io/badge/Font%20Awesome%20icons-555?style=for-the-badge&logo=font%20awesome&logoColor=white)](https://https://code.github.com/)
- - [![html](https://img.shields.io/badge/tmdb%20API-555?style=for-the-badge&logo=The%20Movie%20Database&logoColor=lime)](https://https://code.github.com/)
+ - [![vscode](https://img.shields.io/badge/vscode-555?style=for-the-badge&logo=Visual%20Studio%20Code&logoColor=white)](https://code.visualstudio.com/)
+ - [![github](https://img.shields.io/badge/git/github-555?style=for-the-badge&logo=github&logoColor=white)](https://code.github.com/)
+ - [![fontawesome](https://img.shields.io/badge/Font%20Awesome%20icons-555?style=for-the-badge&logo=font%20awesome&logoColor=white)](https://fontawesome.com/icons)
+ - [![tmdb](https://img.shields.io/badge/tmdb%20API-555?style=for-the-badge&logo=The%20Movie%20Database&logoColor=lime)](https://developers.themoviedb.org/3)
 
 # Concepts Covered
- - DOM setup and reference
- - Page layout with Flex-box (CSS)
- - CSS variable
- - Responsiveness (Mobile friendly)
- - Re-usable functions i.e. (API calls)
- - Handling and resolving errors
- - Handling exceptions
- - Fetch with async/await
+ - 📑 DOM setup and reference
+ - 📑Page layout with Flex-box (CSS)
+ - 📑 CSS variable
+ - 📑 Responsiveness (Mobile friendly)
+ - 📑 Re-usable functions i.e. (API calls)
+ - 📑 Handling and resolving errors
+ - 📑 Handling exceptions
+ - 📑 Fetch with async/await
 
 # Project Break Down
- 1. Design / Figma Wire-frame
+ 1. [Design / Figma Wire-frame](https://www.figma.com/file/MRtHy2Znu9wo0dq9EqoXtN/Untitled?node-id=0%3A1)
  2. HTML Layout / structure / markup
  3. CSS flex-box and grid
  4. Micro-interactions
