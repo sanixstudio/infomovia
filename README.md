@@ -13,14 +13,28 @@ This is a fully **📱 responsive, 💻 front-end, ⚙ vanilla js, and api** bas
 
 ### 🔗 [Demo Link](adnanniaz77.github.io/movie-mania/)
 
-# Tech / Tools used
- 1. [![html](https://img.shields.io/static/v1?label=Mark%20Down&message=HTML&color=orange&logo=html5&style=for-the-badge)](https://www.w3schools.com/html/)
- 2. [![CSS](https://img.shields.io/static/v1?label=Styling&message=CSS&color=blue&logo=css3&style=for-the-badge)](https://www.w3schools.com/css/)
- 3. [![js](https://img.shields.io/static/v1?label=Logic&message=JavaScript&color=yellow&logo=javascript&style=for-the-badge)](https://www.w3schools.com/js/)
+# Build with:
+ 1. [![html](https://img.shields.io/static/v1?label=HTML5&message=Markup&color=orange&logo=html5&style=for-the-badge)](https://www.w3schools.com/html/)
+ 2. [![CSS](https://img.shields.io/static/v1?label=css3&message=Styling&color=blue&logo=css3&style=for-the-badge)](https://www.w3schools.com/css/)
+ 3. [![js](https://img.shields.io/static/v1?label=JavaScript&message=Language&color=yellow&logo=javascript&style=for-the-badge)](https://www.w3schools.com/js/)
+
+# Tools Used
+ - [![html](https://img.shields.io/static/v1?label=VScode&message=Editor&color=blue&logo=Visual%20Studio%20Code&style=for-the-badge)](https://https://code.visualstudio.com/)
+ - [![html](https://img.shields.io/static/v1?label=github&message=version%20control&color=black&logo=GitHub&style=for-the-badge)](https://https://code.github.com/)
+ - Font-awesome icons
+ - TMDB API
  4. [![errors](https://img.shields.io/static/v1?label=Handling&message=Errors&color=red&style=for-the-badge)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error)
  5. [![exceptions](https://img.shields.io/static/v1?label=Handling&message=Exception&color=orange&style=for-the-badge)](https://www.tutorialspoint.com/javascript/javascript_error_handling.htm)
  6. [![api](https://img.shields.io/static/v1?label=API%20source&message=TMDB_API&color=inactive&style=for-the-badge)](https://developers.themoviedb.org/3)
  7. [![fetch](https://img.shields.io/static/v1?label=Handle%20API&message=Fetch%20Async%20Await&color=inactive&style=for-the-badge)](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Async_await)
+
+# Concepts Covered
+ - DOM setup and reference
+ - Re-usable functions i.e. (API calls)
+ - Page layout with Flex-box (CSS)
+ - CSS variable
+ - Responsiveness (Mobile friendly)
+ - 
 
 # App Features
 ## 🔎 Search by keywords:
