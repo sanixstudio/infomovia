@@ -21,18 +21,16 @@ This is a fully **📱 responsive, 💻 front-end, ⚙ vanilla js, and api** bas
  - [![html](https://img.shields.io/badge/git/github-555?style=for-the-badge&logo=github&logoColor=white)](https://https://code.github.com/)
  - [![html](https://img.shields.io/badge/Font%20Awesome%20icons-555?style=for-the-badge&logo=font%20awesome&logoColor=white)](https://https://code.github.com/)
  - [![html](https://img.shields.io/badge/tmdb%20API-555?style=for-the-badge&logo=The%20Movie%20Database&logoColor=lime)](https://https://code.github.com/)
- 4. [![errors](https://img.shields.io/static/v1?label=Handling&message=Errors&color=red&style=for-the-badge)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error)
- 5. [![exceptions](https://img.shields.io/static/v1?label=Handling&message=Exception&color=orange&style=for-the-badge)](https://www.tutorialspoint.com/javascript/javascript_error_handling.htm)
- 6. [![api](https://img.shields.io/static/v1?label=API%20source&message=TMDB_API&color=inactive&style=for-the-badge)](https://developers.themoviedb.org/3)
- 7. [![fetch](https://img.shields.io/static/v1?label=Handle%20API&message=Fetch%20Async%20Await&color=inactive&style=for-the-badge)](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Async_await)
 
 # Concepts Covered
  - DOM setup and reference
- - Re-usable functions i.e. (API calls)
  - Page layout with Flex-box (CSS)
  - CSS variable
  - Responsiveness (Mobile friendly)
- - 
+ - Re-usable functions i.e. (API calls)
+ - Handling and resolving errors
+ - Handling exceptions
+ - Fetch with async/await
 
 # Project Break Down
  1. Design / Figma Wire-frame
@@ -70,7 +68,7 @@ README.md
 temp.html
 ```
 
-# App Features
+# App Features Explained
 ## 🔎 Search by keywords:
    1. Users can find movies or TV-shows information by typing keywords
    2. Keyword can be submitted by either Pressing Enter or Clicking on Magnifying glass icon 
