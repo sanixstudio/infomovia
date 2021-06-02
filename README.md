@@ -9,7 +9,7 @@ This is a fully **📱 responsive, 💻 front-end, ⚙ vanilla js, and api** bas
 
 ## Demo
 
-### 🔗 [Demo Link](https://adnanniaz77.github.io/infomovia/)
+### 🔗 [Demo Link](https://sanixstudio.github.io/infomovia/)
 
 # Built with:
  1. [![html](https://img.shields.io/static/v1?label=HTML5&message=Markup&color=orange&logo=html5&style=for-the-badge)](https://www.w3schools.com/html/)
