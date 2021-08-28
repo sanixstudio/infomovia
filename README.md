@@ -3,7 +3,7 @@
 ![logo](./assets/images/infomovia.png) 
 # **InfoMovia** App
 ## Description
-We all love to know latest information about our favorite Movies and TV shows. InfoMovia enables you to find information about your favorite, currently playing, upcoming and popular movies/TV shows. 
+We all love to know latest information about our favorite Movies and TV shows. InfoMovia lets you to find information about your favorite, currently playing, upcoming and popular movies/TV shows. 
 
 This is a fully **📱 responsive, 💻 front-end, ⚙ vanilla js, and api** based project. 
 
